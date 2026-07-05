@@ -3,11 +3,12 @@
 Mystoica pipeline script.
 
 Called three times a day (matins / sext / vespers) by GitHub Actions.
-1. Calls Claude with web search enabled, asking for a structured JSON reading
-   built from real, obscure public-record sources.
-2. Fills that content into reading_template.html.
-3. Writes the result to readings/YYYY-MM-DD-<slot>.html
-4. Regenerates index.html (today's three dispatches) and archive.html (full list).
+1. Scans previous readings to build a list of already-used sources.
+2. Calls Claude with web search enabled, asking for a structured JSON reading
+   built from real, obscure public-record sources NOT already used.
+3. Fills that content into reading_template.html.
+4. Writes the result to readings/YYYY-MM-DD-<slot>.html
+5. Regenerates index.html (today's three dispatches) and archive.html (full list).
 """
 
 import os
@@ -36,6 +37,11 @@ mainstream press (no AP, Reuters, NYT, CNN, BBC, etc). The more obscure and
 hyperlocal the source, the better.
 
 Find exactly THREE real, unrelated facts from three different obscure sources.
+CRITICAL: you will be given a list of sources/facts already used in previous
+readings. You must NOT reuse any of them, and should actively search for
+different obscure sources each time, even if it takes more searches to find
+fresh ones. Repetition is the single biggest failure mode for this project.
+
 Then invent a symbolic reading, a numerology exercise, a "custody chain" theory,
 and a 5-step cascade narrative connecting them — written with total sincerity,
 never winking at the reader, never explaining that this is satire.
@@ -77,15 +83,49 @@ JSON schema:
 }
 """
 
-def build_user_prompt(slot: str, date_str: str) -> str:
+def get_used_sources(limit_files: int = 30) -> list:
+    """Scans past reading files and pulls out every source URL and fact snippet
+    already used, so the model can be told to avoid repeating them."""
+    if not os.path.isdir("readings"):
+        return []
+    files = sorted(os.listdir("readings"), reverse=True)[:limit_files]
+    used = []
+    for fname in files:
+        if not fname.endswith(".html"):
+            continue
+        path = os.path.join("readings", fname)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                content = f.read()
+        except OSError:
+            continue
+        urls = re.findall(r'exhibit-source">.*?href="([^"]+)"', content, re.S)
+        facts = re.findall(r'exhibit-fact">(.*?)</p>', content, re.S)
+        for u in urls:
+            used.append(f"URL: {u}")
+        for fact in facts:
+            snippet = re.sub(r"<[^>]+>", "", fact).strip()
+            used.append(f"FACT: {snippet[:140]}")
+    return used
+
+def build_user_prompt(slot: str, date_str: str, used_sources: list) -> str:
     info = SLOT_INFO[slot]
+    exclusion_block = ""
+    if used_sources:
+        joined = "\n".join(f"- {s}" for s in used_sources[:60])
+        exclusion_block = (
+            "\n\nThe following sources/facts have ALREADY been used in previous "
+            "readings. Do not reuse any of them — find different, fresh obscure "
+            f"sources instead:\n{joined}\n"
+        )
     return (
         f"Generate today's {info['label']} reading for {date_str}. "
         f"This is the {slot} dispatch ({info['hour']} slot). "
         "Search for real, obscure, current sources and build the JSON reading now."
+        f"{exclusion_block}"
     )
 
-def call_claude(slot: str, date_str: str) -> dict:
+def call_claude(slot: str, date_str: str, used_sources: list) -> dict:
     api_key = os.environ["ANTHROPIC_API_KEY"]
     headers = {
         "x-api-key": api_key,
@@ -96,7 +136,7 @@ def call_claude(slot: str, date_str: str) -> dict:
         "model": MODEL,
         "max_tokens": 8000,
         "system": SYSTEM_PROMPT,
-        "messages": [{"role": "user", "content": build_user_prompt(slot, date_str)}],
+        "messages": [{"role": "user", "content": build_user_prompt(slot, date_str, used_sources)}],
         "tools": [{"type": "web_search_20250305", "name": "web_search"}],
     }
     resp = requests.post(API_URL, headers=headers, json=payload, timeout=180)
@@ -290,8 +330,11 @@ def main():
     case_date = now.strftime("%Y-%m-%d")
     case_no = f"{now.strftime('%Y.%m%d')}-{SLOT_INFO[slot]['suffix']}"
 
+    used_sources = get_used_sources()
+    print(f"Found {len(used_sources)} previously-used source references to exclude.")
+
     print(f"Generating {slot} reading for {case_date}...")
-    reading = call_claude(slot, date_str)
+    reading = call_claude(slot, date_str, used_sources)
 
     os.makedirs("readings", exist_ok=True)
     out_path = f"readings/{case_date}-{slot}.html"
