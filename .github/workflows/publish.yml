@@ -1,0 +1,68 @@
+name: Publish Mystoica Reading
+
+on:
+  schedule:
+    # All times UTC. Adjust to taste — these correspond to
+    # roughly 08:00, 14:00, 20:00 in London during BST.
+    - cron: '0 7 * * *'   # Matins
+    - cron: '0 13 * * *'  # Sext
+    - cron: '0 19 * * *'  # Vespers
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: 'Which slot to generate (for manual testing)'
+        required: true
+        default: 'matins'
+        type: choice
+        options:
+          - matins
+          - sext
+          - vespers
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Determine slot
+        id: slot
+        run: |
+          if [ -n "${{ github.event.inputs.slot }}" ]; then
+            echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
+          else
+            HOUR=$(date -u +%H)
+            if [ "$HOUR" -lt 10 ]; then
+              SLOT=matins
+            elif [ "$HOUR" -lt 16 ]; then
+              SLOT=sext
+            else
+              SLOT=vespers
+            fi
+            echo "slot=$SLOT" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate reading
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_reading.py ${{ steps.slot.outputs.slot }}
+
+      - name: Commit and push
+        run: |
+          git config user.name "mystoica-bot"
+          git config user.email "actions@github.com"
+          git add readings/ index.html archive.html
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "Automated reading: ${{ steps.slot.outputs.slot }} $(date -u +%Y-%m-%d)"
+          git push
