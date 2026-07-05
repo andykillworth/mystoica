@@ -3,470 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mystoica — Reading for July 4</title>
+<title>Mystoica — Today</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper: #E9E2CE;
-    --paper-dark: #DED4B9;
-    --ink: #2A2620;
-    --ink-soft: #58503f;
-    --stamp: #9C3B26;
-    --carbon: #3D4A63;
-    --hairline: #b7ab8c;
-    --thread: #8a3226;
+    --paper:#E9E2CE; --paper-dark:#DED4B9; --ink:#2A2620; --ink-soft:#58503f;
+    --stamp:#9C3B26; --carbon:#3D4A63; --hairline:#b7ab8c; --thread:#8a3226;
   }
-
   *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Spectral',Georgia,serif;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 100px;}
 
-  html,body{
-    margin:0;
-    padding:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Spectral', Georgia, serif;
+  header{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--hairline);padding-bottom:20px;margin-bottom:8px;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .word{font-size:1.9rem;font-weight:600;letter-spacing:0.03em;}
+  .sub{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:2px;}
+  .date{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--ink-soft);line-height:1.7;}
+
+  .intro{font-style:italic;color:var(--ink-soft);font-size:1rem;line-height:1.6;margin:24px 0 36px;}
+
+  .dispatches{display:flex;flex-direction:column;gap:16px;margin-bottom:44px;}
+
+  .dispatch{
+    border:1px solid var(--hairline);background:var(--paper-dark);
+    padding:20px 22px 18px;text-decoration:none;color:inherit;display:block;
+    position:relative;transition:transform 0.15s ease;
   }
+  .dispatch:hover{ transform:translateX(2px); }
 
-  body{
-    background-image:
-      radial-gradient(ellipse at top left, rgba(255,255,255,0.25), transparent 45%),
-      radial-gradient(ellipse at bottom right, rgba(0,0,0,0.05), transparent 50%);
+  .dispatch.latest{ border:1px solid var(--stamp); background:var(--paper); }
+  .dispatch.past{ opacity:0.72; }
+
+  .dispatch-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;gap:8px;}
+  .hour-badge{
+    font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;
+    text-transform:uppercase;color:var(--stamp);display:flex;align-items:center;gap:8px;
   }
+  .hour-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--stamp);}
+  .hour-time{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--ink-soft);}
 
-  .mono{ font-family:'IBM Plex Mono', monospace; }
+  .dispatch-teaser{font-size:1.06rem;line-height:1.55;font-style:italic;margin:0 0 12px;}
 
-  .wrap{
-    max-width:760px;
-    margin:0 auto;
-    padding:56px 24px 100px;
+  .dispatch-foot{display:flex;justify-content:space-between;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--ink-soft);border-top:1px dashed var(--hairline);padding-top:10px;}
+  .read-link{color:var(--carbon);}
+
+  .status-pill{
+    font-family:'IBM Plex Mono',monospace;font-size:0.62rem;letter-spacing:0.04em;text-transform:uppercase;
+    padding:2px 8px;border:1px solid var(--stamp);color:var(--stamp);border-radius:20px;
   }
+  .status-pill.done{border-color:var(--ink-soft);color:var(--ink-soft);}
 
-  /* ===== Header ===== */
-  header{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    border-bottom:1px solid var(--hairline);
-    padding-bottom:22px;
-    margin-bottom:40px;
-    opacity:0;
-    animation: riseIn 0.7s ease-out forwards;
-  }
-
-  .wordmark{
-    font-size:2.1rem;
-    letter-spacing:0.04em;
-    font-weight:600;
-    margin:0;
-  }
-
-  .tagline{
-    margin:4px 0 0;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.72rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
+  .archive-link{
+    display:block;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:0.74rem;
+    color:var(--carbon);text-decoration:none;border-top:1px solid var(--hairline);padding-top:20px;
   }
 
-  .case-no{
-    text-align:right;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.72rem;
-    line-height:1.6;
-    color:var(--ink-soft);
-    white-space:nowrap;
-    padding-top:6px;
-  }
-  .case-no strong{ color:var(--ink); }
-
-  /* ===== Intro line ===== */
-  .intro{
-    font-style:italic;
-    font-size:1.05rem;
-    color:var(--ink-soft);
-    margin:0 0 34px;
-    opacity:0;
-    animation: riseIn 0.7s ease-out 0.15s forwards;
-  }
-
-  /* ===== Exhibits ===== */
-  .exhibits{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-    margin-bottom:44px;
-  }
-
-  .exhibit{
-    position:relative;
-    background:var(--paper-dark);
-    border:1px solid var(--hairline);
-    padding:20px 22px 18px;
-    opacity:0;
-    transform:translateY(8px);
-    animation: riseIn 0.6s ease-out forwards;
-  }
-  .exhibit:nth-child(1){ animation-delay:0.3s; }
-  .exhibit:nth-child(2){ animation-delay:0.45s; }
-  .exhibit:nth-child(3){ animation-delay:0.6s; }
-
-  .exhibit-tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.68rem;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--stamp);
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin-bottom:10px;
-  }
-  .exhibit-tag::before{
-    content:"";
-    width:7px;height:7px;
-    border-radius:50%;
-    background:var(--stamp);
-    display:inline-block;
-  }
-
-  .exhibit-loc{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.7rem;
-    color:var(--ink-soft);
-    text-transform:uppercase;
-    letter-spacing:0.05em;
-  }
-
-  .exhibit-fact{
-    font-size:1.08rem;
-    line-height:1.55;
-    margin:8px 0 12px;
-  }
-
-  .exhibit-source{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.68rem;
-    color:var(--ink-soft);
-    border-top:1px dashed var(--hairline);
-    padding-top:8px;
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-    flex-wrap:wrap;
-  }
-  .exhibit-source a{
-    color:var(--carbon);
-    text-decoration:none;
-    border-bottom:1px solid var(--carbon);
-  }
-  .exhibit-source a:hover{ opacity:0.7; }
-
-  /* connecting thread */
-  .thread-row{
-    display:flex;
-    justify-content:center;
-    margin: -6px 0;
-    opacity:0;
-    animation: riseIn 0.6s ease-out 0.75s forwards;
-  }
-  .thread-row svg{ display:block; }
-
-  /* ===== Verdict ===== */
-  .symbols{
-    position:relative;
-    border:1px solid var(--hairline);
-    background:linear-gradient(180deg, rgba(255,255,255,0.3), transparent 40%);
-    padding:20px 22px 22px;
-    margin-bottom:26px;
-    opacity:0;
-    animation: riseIn 0.6s ease-out 0.66s forwards;
-  }
-  .symbols .verdict-label{
-    position:static;
-    display:inline-block;
-    background:none;
-    padding:0;
-    margin-bottom:12px;
-  }
-
-  .symbol-list{ margin:0 0 16px; }
-  .symbol-item{ margin-bottom:14px; }
-  .symbol-item:last-child{ margin-bottom:0; }
-
-  .symbol-item dt{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.72rem;
-    letter-spacing:0.05em;
-    text-transform:uppercase;
-    color:var(--stamp);
-    margin-bottom:5px;
-  }
-
-  .symbol-item dd{
-    margin:0;
-    font-size:0.96rem;
-    line-height:1.6;
-    color:var(--ink);
-  }
-  .symbol-item dd em{ font-style:italic; color:var(--ink-soft); }
-
-  .symbol-synthesis{
-    font-size:1.02rem;
-    line-height:1.6;
-    font-style:italic;
-    color:var(--ink-soft);
-    margin:0;
-    padding-top:14px;
-    border-top:1px dashed var(--hairline);
-  }
-
-  .numerology{
-    position:relative;
-    border:1px solid var(--hairline);
-    background:var(--paper-dark);
-    padding:20px 22px 22px;
-    margin-bottom:26px;
-    opacity:0;
-    animation: riseIn 0.6s ease-out 0.72s forwards;
-  }
-  .numerology .verdict-label{
-    position:static;
-    display:inline-block;
-    background:none;
-    padding:0;
-    margin-bottom:12px;
-  }
-
-  .num-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-bottom:14px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.82rem;
-  }
-  .num-table td{
-    padding:6px 0;
-    border-bottom:1px dashed var(--hairline);
-    color:var(--ink);
-  }
-  .num-table tr:last-child td{ border-bottom:none; }
-  .num-reduce{
-    text-align:right;
-    color:var(--stamp);
-    white-space:nowrap;
-    width:60px;
-  }
-
-  .num-callout{
-    font-size:0.98rem;
-    line-height:1.6;
-    margin:0 0 12px;
-    color:var(--ink);
-  }
-  .num-callout strong{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--stamp);
-    font-size:1.05rem;
-  }
-
-  .num-synthesis{
-    font-size:0.96rem;
-    line-height:1.6;
-    font-style:italic;
-    color:var(--ink-soft);
-    margin:0;
-    padding-top:12px;
-    border-top:1px dashed var(--hairline);
-  }
-
-  .theory{
-    position:relative;
-    border-left:3px solid var(--carbon);
-    background:var(--paper-dark);
-    padding:18px 22px 20px;
-    margin-bottom:26px;
-    opacity:0;
-    animation: riseIn 0.6s ease-out 0.78s forwards;
-  }
-  .theory .verdict-label{
-    position:static;
-    display:inline-block;
-    background:none;
-    padding:0;
-    color:var(--carbon);
-    margin-bottom:8px;
-  }
-  .theory-text{
-    font-size:0.96rem;
-    line-height:1.6;
-    color:var(--ink);
-    margin:0;
-  }
-
-  .cascade{
-    position:relative;
-    border:1px solid var(--ink);
-    padding:36px 30px 30px;
-    background:
-      repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px);
-    opacity:0;
-    animation: riseIn 0.7s ease-out 0.95s forwards;
-  }
-
-  .verdict-label{
-    position:absolute;
-    top:-11px;
-    left:26px;
-    background:var(--paper);
-    padding:0 10px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.68rem;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-  }
-
-  .cascade-intro{
-    font-size:1.02rem;
-    line-height:1.6;
-    font-style:italic;
-    color:var(--ink-soft);
-    margin:6px 0 26px;
-  }
-  .cascade-intro em{ color:var(--ink); font-style:italic; }
-
-  .cascade-chain{
-    position:relative;
-    padding-left:30px;
-    margin-bottom:26px;
-  }
-  .cascade-chain::before{
-    content:"";
-    position:absolute;
-    left:9px;
-    top:6px;
-    bottom:6px;
-    width:1px;
-    background:repeating-linear-gradient(to bottom, var(--thread) 0 4px, transparent 4px 8px);
-    opacity:0.55;
-  }
-
-  .cascade-step{
-    position:relative;
-    margin-bottom:20px;
-  }
-  .cascade-step:last-child{ margin-bottom:0; }
-
-  .cascade-node{
-    position:absolute;
-    left:-30px;
-    top:1px;
-    width:19px;
-    height:19px;
-    border-radius:50%;
-    background:var(--paper);
-    border:1px solid var(--thread);
-    color:var(--thread);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.62rem;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-
-  .cascade-step p{
-    font-size:0.98rem;
-    line-height:1.6;
-    margin:0;
-  }
-
-  .cascade-loc{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.72rem;
-    letter-spacing:0.04em;
-    color:var(--carbon);
-    text-transform:uppercase;
-  }
-
-  .cascade-outro{
-    font-size:1.2rem;
-    line-height:1.6;
-    font-style:italic;
-    font-weight:500;
-    margin:0;
-    padding-top:16px;
-    border-top:1px dashed var(--hairline);
-  }
-
-  .stamp-seal{
-    position:absolute;
-    right:22px;
-    bottom:18px;
-    width:92px;
-    height:92px;
-    border:2.5px solid var(--stamp);
-    border-radius:50%;
-    color:var(--stamp);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.62rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    transform:rotate(-11deg) scale(0.85);
-    opacity:0;
-    mix-blend-mode:multiply;
-    animation: stampDown 0.35s ease-out 1.5s forwards;
-  }
-  .stamp-seal::before{
-    content:"";
-    position:absolute;
-    inset:6px;
-    border:1px solid var(--stamp);
-    border-radius:50%;
-  }
-
-  @keyframes stampDown{
-    0%{ opacity:0; transform:rotate(-11deg) scale(1.4); }
-    60%{ opacity:0.85; transform:rotate(-11deg) scale(0.78); }
-    100%{ opacity:0.85; transform:rotate(-11deg) scale(0.85); }
-  }
-
-  /* ===== Footer / archive note ===== */
   footer{
-    margin-top:48px;
-    padding-top:18px;
-    border-top:1px solid var(--hairline);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.68rem;
-    color:var(--ink-soft);
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:10px;
-    opacity:0;
-    animation: riseIn 0.7s ease-out 1.15s forwards;
+    margin-top:40px;padding-top:16px;border-top:1px solid var(--hairline);
+    font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--ink-soft);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
   }
-
-  @keyframes riseIn{
-    from{ opacity:0; transform:translateY(8px); }
-    to{ opacity:1; transform:translateY(0); }
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ animation: none !important; opacity:1 !important; transform:none !important; }
-  }
+  footer a{color:var(--ink-soft);}
 
   @media (max-width:600px){
-    .wrap{ padding:36px 16px 70px; }
-    header{ flex-direction:column; gap:14px; }
-    .case-no{ text-align:left; }
-    .wordmark{ font-size:1.7rem; }
-    .stamp-seal{ position:static; margin-top:18px; transform:rotate(-11deg) scale(0.85); }
+    .wrap{padding:36px 16px 70px;}
+    header{flex-direction:column;gap:14px;}
+    .date{text-align:left;}
   }
 </style>
 </head>
@@ -474,134 +78,72 @@
 <div class="wrap">
 
   <header>
-    <div>
-      <p class="wordmark">MYSTOICA</p>
-      <p class="tagline">a reading, once daily</p>
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#9C3B26" stroke-width="3" stroke-dasharray="205 45" transform="rotate(-15 50 50)"/>
+        <path d="M50 30 L67.3 60 L32.7 60 Z" fill="none" stroke="#8a3226" stroke-width="1" stroke-dasharray="2 3" opacity="0.7"/>
+        <circle cx="50" cy="30" r="3.4" fill="#9C3B26"/>
+        <circle cx="67.3" cy="60" r="3.4" fill="#9C3B26"/>
+        <circle cx="32.7" cy="60" r="3.4" fill="#9C3B26"/>
+      </svg>
+      <div>
+        <div class="word">MYSTOICA</div>
+        <div class="sub">three readings, daily</div>
+      </div>
     </div>
-    <div class="case-no">
-      <div>Case No. <strong>2026.0704</strong></div>
-      <div>Sourced 07:00–14:00 ET</div>
-      <div>Mainstream press excluded</div>
+    <div class="date">
+      Sunday, July 5, 2026<br>
+      Case 2026.0705
     </div>
   </header>
 
-  <p class="intro">Three things happened, in three places that don't know each other.</p>
+  <p class="intro">The day in three parts. Nothing here explains itself twice — read each on its own, or watch what carries between them.</p>
 
-  <div class="exhibits">
+  <div class="dispatches">
 
-    <div class="exhibit">
-      <div class="exhibit-tag">Exhibit A — Filed</div>
-      <div class="exhibit-loc">Waukesha, Wisconsin</div>
-      <p class="exhibit-fact">A man arrived at the police department to ask about the correct paperwork for descenting a pet skunk he already owns. Municipal code doesn't ban the animal — it just never anticipated it.</p>
-      <div class="exhibit-source">
-        <span>Waukesha Police Blotter, Jul 1</span>
-        <a href="https://www.gmtoday.com/the_freeman/news/waukesha-police-blotter-july-1-2026/article_7eaaa4d8-5783-4d3a-b6c2-e0532585823e.html" target="_blank" rel="noopener">gmtoday.com ↗</a>
+    <a class="dispatch past" href="/readings/2026-0705-matins.html">
+      <div class="dispatch-top">
+        <span class="hour-badge">Matins — 2026.0705-M</span>
+        <span class="hour-time">07:00</span>
       </div>
-    </div>
-
-    <div class="thread-row">
-      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 -4 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
-    </div>
-
-    <div class="exhibit">
-      <div class="exhibit-tag">Exhibit B — Withdrawn</div>
-      <div class="exhibit-loc">Halifax, North Carolina</div>
-      <p class="exhibit-fact">5,300 pounds of a pasta salad were pulled from shelves for undeclared egg and milk — not contamination, just a label that forgot to mention what was already inside the tub.</p>
-      <div class="exhibit-source">
-        <span>FSIS Public Health Alert, Jun 25</span>
-        <a href="https://www.fsis.usda.gov/recalls" target="_blank" rel="noopener">fsis.usda.gov ↗</a>
+      <p class="dispatch-teaser">"Mystoica says: the paperwork is trying to catch up with the world. Possession and permission arrived on different days today."</p>
+      <div class="dispatch-foot">
+        <span>Waukesha · Halifax · Watertown</span>
+        <span class="read-link">Full reading →</span>
       </div>
-    </div>
+    </a>
 
-    <div class="thread-row">
-      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 20 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
-    </div>
+    <a class="dispatch latest" href="/readings/2026-0705-sext.html">
+      <div class="dispatch-top">
+        <span class="hour-badge">Sext — 2026.0705-S</span>
+        <span class="hour-time">13:00</span>
+      </div>
+      <p class="dispatch-teaser">"Mystoica says: three permits were requested today, and all three describe things that already existed before anyone asked."</p>
+      <div class="dispatch-foot">
+        <span>Status: <span class="status-pill">live now</span></span>
+        <span class="read-link">Full reading →</span>
+      </div>
+    </a>
 
-    <div class="exhibit">
-      <div class="exhibit-tag">Exhibit C — Unclaimed</div>
-      <div class="exhibit-loc">Watertown, New York</div>
-      <p class="exhibit-fact">At 09:42 a.m., a dispatch log records "Found Property" at a gas station off State Route 232. No further description was entered. It remains, as of writing, only that: found, and nobody's.</p>
-      <div class="exhibit-source">
-        <span>Jefferson County Blotter, Jul 2</span>
-        <a href="https://www.newzjunky.com/police-blotter-report-for-friday-july-3-2026/" target="_blank" rel="noopener">newzjunky.com ↗</a>
+    <div class="dispatch past" style="opacity:0.5;cursor:default;">
+      <div class="dispatch-top">
+        <span class="hour-badge" style="color:var(--ink-soft);">Vespers — 2026.0705-V</span>
+        <span class="hour-time">19:00</span>
+      </div>
+      <p class="dispatch-teaser">Not yet filed.</p>
+      <div class="dispatch-foot">
+        <span>Status: <span class="status-pill done">pending</span></span>
+        <span></span>
       </div>
     </div>
 
   </div>
 
-  <div class="symbols">
-    <span class="verdict-label">Symbolic Notes</span>
-    <dl class="symbol-list">
-      <div class="symbol-item">
-        <dt>A — The Skunk</dt>
-        <dd>An animal whose danger is entirely reputational: one defense, rarely used, almost never needed. Descenting doesn't remove the danger — it removes the <em>announcement</em> of danger. A threat quietly surrendering its own warning system in exchange for being let inside.</dd>
-      </div>
-      <div class="symbol-item">
-        <dt>B — The Recall</dt>
-        <dd>Not contamination. Omission. The product was always what it was; the label simply hadn't caught up to it yet. The gap between what a thing is and what it is currently permitted to say it is.</dd>
-      </div>
-      <div class="symbol-item">
-        <dt>C — The Found Object</dt>
-        <dd>Property without a claimant is property without a story. It exists, verified, entered in a log — and nowhere else. An identity withheld until someone arrives to attach a name to it.</dd>
-      </div>
-    </dl>
-    <p class="symbol-synthesis">Read together, three refusals to declare: an animal not yet approved, an ingredient not yet admitted, an object not yet named. Today's exhibits share no crime, no danger, no real loss. What they share is the interval — that ordinary, unremarkable span of time in which something is already true and not yet official. All three are still sitting in it.</p>
-  </div>
-
-  <div class="numerology">
-    <span class="verdict-label">Numerology</span>
-    <table class="num-table">
-      <tbody>
-        <tr><td>Ordinance 33.01, subsection 7</td><td class="num-reduce">→ 7</td></tr>
-        <tr><td>5,300 lbs. recalled</td><td class="num-reduce">→ 8</td></tr>
-        <tr><td>Filed 09:42 a.m.</td><td class="num-reduce">→ 6</td></tr>
-        <tr><td>State Route 232</td><td class="num-reduce">→ 7</td></tr>
-        <tr><td>Case No. 2026.0704</td><td class="num-reduce">→ 3</td></tr>
-      </tbody>
-    </table>
-    <p class="num-callout"><strong>7</strong> appears twice today, uninvited — once in a subsection nobody reads, once in a route number nobody memorizes.</p>
-    <p class="num-synthesis">Eight and six are expected numbers here: material weight, quiet responsibility. They describe what was already visible. Seven is not expected — it is classically the number of concealment, the thing held internally before it is said aloud. That it surfaced twice, from two documents that have never touched each other, is the closest thing to a signature today's reading has.</p>
-  </div>
-
-  <div class="theory">
-    <span class="verdict-label">Working Theory — The Adjacency Clause</span>
-    <p class="theory-text">No form is filed in isolation. Every document that crosses a desk today touches infrastructure that something else touched yesterday: a shared office, a shared route, a shared supplier, a shared file cabinet. Mystoica does not claim these contacts cause one another. It claims only that the contact is real — that the systems processing our paperwork are more connected than the events passing through them — and that if custody is traced far enough, the distance between a skunk permit and a truck route stops being coincidence and starts being infrastructure. What follows is that trace.</p>
-  </div>
-
-  <div class="cascade">
-    <span class="verdict-label">The Cascade</span>
-    <p class="cascade-intro">Custody, traced below, five contacts deep.</p>
-
-    <div class="cascade-chain">
-      <div class="cascade-step">
-        <div class="cascade-node">1</div>
-        <p><span class="cascade-loc">Waukesha, WI</span> — The officer who takes the skunk paperwork logs it under Ordinance 33.01 and, per procedure, forwards a copy to the county agricultural extension office.</p>
-      </div>
-      <div class="cascade-step">
-        <div class="cascade-node">2</div>
-        <p>That extension office shares a records-sharing agreement — one signed in 2011 and never revisited — with a regional USDA field liaison who also routes misbranding paperwork out of the Southeast.</p>
-      </div>
-      <div class="cascade-step">
-        <div class="cascade-node">3</div>
-        <p><span class="cascade-loc">Halifax, NC</span> — That liaison's desk is where the pasta salad recall crosses from "voluntary" to "on the record." The undeclared egg came from a supplier who also fills contracts for interstate cafeteria services.</p>
-      </div>
-      <div class="cascade-step">
-        <div class="cascade-node">4</div>
-        <p>One of those cafeteria trucks runs a return route north, dead-heading empty past a distribution yard off State Route 232 — the same stretch logged in a Watertown dispatch report three days later.</p>
-      </div>
-      <div class="cascade-step">
-        <div class="cascade-node">5</div>
-        <p><span class="cascade-loc">Watertown, NY</span> — What the truck left behind at 09:42 a.m. was never itemized. Only this: <em>Found Property.</em> No further description entered. The loop doesn't close. It just stops being written down.</p>
-      </div>
-    </div>
-
-    <p class="cascade-outro">Mystoica says: nothing here is proof of anything. But somewhere between a skunk and an empty truck, a form was filled out correctly, and that's the part worth noticing.</p>
-    <div class="stamp-seal">so it<br>follows</div>
-  </div>
+  <a class="archive-link" href="/archive.html">View the full archive →</a>
 
   <footer>
-    <span>Sources cited, connections invented.</span>
-    <span>Next reading: tomorrow, same hour.</span>
+    <span><a href="/about.html">About</a></span>
+    <span>Generated automatically · <a href="/about.html">no human review</a></span>
   </footer>
 
 </div>
