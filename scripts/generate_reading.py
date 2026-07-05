@@ -19,6 +19,7 @@ from datetime import datetime, timezone
 
 API_URL = "https://api.anthropic.com/v1/messages"
 MODEL = "claude-sonnet-5"  # swap to claude-opus-4-8 for higher quality at higher cost
+SITE_URL = "https://mystoica.com"
 
 SLOT_INFO = {
     "matins": {"label": "Matins", "suffix": "M", "hour": "07:00"},
@@ -105,7 +106,6 @@ def call_claude(slot: str, date_str: str) -> dict:
     text_blocks = [b["text"] for b in data.get("content", []) if b.get("type") == "text"]
     full_text = "\n".join(text_blocks).strip()
 
-    # extract just the JSON object, in case the model added any stray text around it
     start = full_text.find("{")
     end = full_text.rfind("}")
     if start == -1 or end == -1:
@@ -170,13 +170,15 @@ def render_cascade_steps(steps: list) -> str:
       </div>''')
     return "\n".join(parts)
 
-def render_page(reading: dict, slot: str, date_str: str, case_no: str) -> str:
+def render_page(reading: dict, slot: str, date_str: str, case_no: str, out_path: str) -> str:
     with open("templates/reading_template.html", "r", encoding="utf-8") as f:
         tpl = f.read()
 
     info = SLOT_INFO[slot]
+    canonical_url = f"{SITE_URL}/{out_path}"
     replacements = {
         "__TITLE__": f"Mystoica — {info['label']} Reading, {date_str}",
+        "__CANONICAL_URL__": canonical_url,
         "__HOUR_LABEL__": f"{info['label']} — a reading, three times daily",
         "__CASE_NO__": case_no,
         "__SOURCED_WINDOW__": f"Sourced around {info['hour']}",
@@ -292,8 +294,8 @@ def main():
     reading = call_claude(slot, date_str)
 
     os.makedirs("readings", exist_ok=True)
-    page_html = render_page(reading, slot, date_str, case_no)
     out_path = f"readings/{case_date}-{slot}.html"
+    page_html = render_page(reading, slot, date_str, case_no, out_path)
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(page_html)
     print(f"Wrote {out_path}")
