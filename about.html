@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystoica — About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E9E2CE; --paper-dark:#DED4B9; --ink:#2A2620; --ink-soft:#58503f;
+    --stamp:#9C3B26; --carbon:#3D4A63; --hairline:#b7ab8c; --thread:#8a3226;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Spectral',Georgia,serif;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 100px;}
+
+  header{display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--hairline);padding-bottom:20px;margin-bottom:34px;}
+  .word{font-size:1.7rem;font-weight:600;letter-spacing:0.03em;display:block;}
+  .sub{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-soft);}
+
+  .lede{
+    font-size:1.15rem;line-height:1.6;margin:0 0 36px;
+    border-left:3px solid var(--stamp);padding-left:18px;
+  }
+
+  section{margin:36px 0;}
+  .section-label{
+    font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;
+    text-transform:uppercase;color:var(--stamp);margin:0 0 14px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .section-label::after{content:"";flex:1;height:1px;background:var(--hairline);}
+
+  p{font-size:1rem;line-height:1.65;margin:0 0 14px;}
+  p:last-child{margin-bottom:0;}
+
+  /* real vs invented */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .split-col{border:1px solid var(--hairline);background:var(--paper-dark);padding:16px 18px;}
+  .split-col h3{
+    font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;
+    text-transform:uppercase;margin:0 0 10px;
+  }
+  .split-col.real h3{color:var(--carbon);}
+  .split-col.invented h3{color:var(--stamp);}
+  .split-col ul{margin:0;padding-left:18px;font-size:0.92rem;line-height:1.6;color:var(--ink);}
+
+  /* pipeline mini list */
+  .steps{list-style:none;margin:0;padding:0;}
+  .steps li{
+    display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--hairline);
+    font-size:0.96rem;line-height:1.5;
+  }
+  .steps li:last-child{border-bottom:none;}
+  .steps .n{
+    font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--stamp);
+    flex-shrink:0;padding-top:2px;
+  }
+
+  .isnt ul{margin:0;padding-left:18px;font-size:0.96rem;line-height:1.7;color:var(--ink-soft);}
+
+  .callout{
+    border:1px solid var(--ink);padding:20px 22px;margin-top:8px;
+    background:repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px);
+  }
+  .callout p{font-style:italic;font-size:1.02rem;color:var(--ink);}
+  .callout p:last-child{margin-bottom:0;}
+
+  footer{
+    margin-top:44px;padding-top:18px;border-top:1px solid var(--hairline);
+    font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--ink-soft);line-height:1.8;
+  }
+  footer strong{color:var(--ink);}
+
+  @media (max-width:600px){
+    .wrap{padding:36px 16px 70px;}
+    .split{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <svg width="36" height="36" viewBox="0 0 100 100" style="flex-shrink:0;">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="#9C3B26" stroke-width="3" stroke-dasharray="205 45" transform="rotate(-15 50 50)"/>
+      <path d="M50 30 L67.3 60 L32.7 60 Z" fill="none" stroke="#8a3226" stroke-width="1" stroke-dasharray="2 3" opacity="0.7"/>
+      <circle cx="50" cy="30" r="3.4" fill="#9C3B26"/>
+      <circle cx="67.3" cy="60" r="3.4" fill="#9C3B26"/>
+      <circle cx="32.7" cy="60" r="3.4" fill="#9C3B26"/>
+    </svg>
+    <div>
+      <span class="word">MYSTOICA</span>
+      <span class="sub">about</span>
+    </div>
+  </header>
+
+  <p class="lede">Mystoica is an art project. It is written, entirely, by an AI, on a schedule, with no person reading it before it publishes. This page exists so that's never in question.</p>
+
+  <section>
+    <p class="section-label">What happens every day</p>
+    <p>Once a day, a script runs. It prompts Claude (Anthropic's AI model) to search real, obscure public records — small-town police blotters, USDA/FSIS recall notices, patent filings, fire-department dispatch logs — and pull out a few genuinely unrelated facts. It then writes a "reading": a symbolic gloss on each fact, a numerology exercise using real numbers pulled from the sources, a stated theory for why the events are secretly connected, and a step-by-step narrative tracing that connection.</p>
+    <p>That page is generated, saved, and published automatically. Nobody at Mystoica sees it first. The first read is yours.</p>
+  </section>
+
+  <section>
+    <p class="section-label">What's real and what's invented</p>
+    <div class="split">
+      <div class="split-col real">
+        <h3>Real</h3>
+        <ul>
+          <li>Every underlying fact (the skunk, the recall, the found object)</li>
+          <li>Every citation and source link</li>
+          <li>Every number used in the numerology</li>
+        </ul>
+      </div>
+      <div class="split-col invented">
+        <h3>Invented</h3>
+        <ul>
+          <li>Any claim that the events are connected</li>
+          <li>The symbolic meanings assigned to each fact</li>
+          <li>The "custody" chain and working theory</li>
+          <li>The numerology's significance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-label">How it's built</p>
+    <ul class="steps">
+      <li><span class="n">01</span> A scheduled job (GitHub Actions) triggers once daily.</li>
+      <li><span class="n">02</span> Claude searches obscure sources and drafts the day's reading.</li>
+      <li><span class="n">03</span> The text is dropped into a fixed template — nothing is hand-edited.</li>
+      <li><span class="n">04</span> The page is committed to a public repository, which is also the archive.</li>
+      <li><span class="n">05</span> A static host rebuilds and republishes the site automatically.</li>
+    </ul>
+  </section>
+
+  <section class="isnt">
+    <p class="section-label">What this isn't</p>
+    <ul>
+      <li>It isn't journalism. Facts are real; framing is fiction.</li>
+      <li>It isn't fortune-telling. Nothing here predicts anything about you.</li>
+      <li>It isn't financial, legal, medical, or any other kind of advice.</li>
+      <li>It isn't claiming the events it connects are actually connected.</li>
+    </ul>
+  </section>
+
+  <div class="callout">
+    <p>The interesting part was never whether the connections are true. It's how easily a confident sentence can make you check anyway. Mystoica exists to make that reflex visible, using nothing but real paperwork and a model that was asked to sound sure of itself.</p>
+  </div>
+
+  <footer>
+    <div><strong>Generated by:</strong> Claude (Anthropic), via API, with web search</div>
+    <div><strong>Reviewed before publishing:</strong> no one</div>
+    <div><strong>Sources:</strong> obscure public records only — no mainstream press</div>
+    <div><strong>Archive:</strong> every past reading, unedited, in the site's git history</div>
+  </footer>
+
+</div>
+</body>
+</html>
