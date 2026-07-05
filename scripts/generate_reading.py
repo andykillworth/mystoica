@@ -93,22 +93,37 @@ def call_claude(slot: str, date_str: str) -> dict:
     }
     payload = {
         "model": MODEL,
-        "max_tokens": 4000,
+        "max_tokens": 8000,
         "system": SYSTEM_PROMPT,
         "messages": [{"role": "user", "content": build_user_prompt(slot, date_str)}],
         "tools": [{"type": "web_search_20250305", "name": "web_search"}],
     }
-    resp = requests.post(API_URL, headers=headers, json=payload, timeout=120)
+    resp = requests.post(API_URL, headers=headers, json=payload, timeout=180)
     resp.raise_for_status()
     data = resp.json()
 
     text_blocks = [b["text"] for b in data.get("content", []) if b.get("type") == "text"]
     full_text = "\n".join(text_blocks).strip()
 
-    # strip stray markdown fences if the model added them despite instructions
-    full_text = re.sub(r"^```json\s*|\s*```$", "", full_text.strip())
+    # extract just the JSON object, in case the model added any stray text around it
+    start = full_text.find("{")
+    end = full_text.rfind("}")
+    if start == -1 or end == -1:
+        print("---- RAW MODEL OUTPUT (no JSON object found) ----")
+        print(full_text if full_text else "(empty response)")
+        print("---- STOP REASON ----")
+        print(data.get("stop_reason"))
+        print("--------------------------------------------------")
+        raise ValueError("No JSON object found in model output")
 
-    return json.loads(full_text)
+    json_str = full_text[start:end + 1]
+    try:
+        return json.loads(json_str)
+    except json.JSONDecodeError:
+        print("---- RAW MODEL OUTPUT (failed to parse as JSON) ----")
+        print(full_text)
+        print("-----------------------------------------------------")
+        raise
 
 def render_exhibits(exhibits: list) -> str:
     threads = [
