@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Mystoica — Archive</title></head>
-<body style="font-family:Georgia,serif;max-width:640px;margin:60px auto;">
-<h1>Archive</h1>
-<ul>
-    <li><a href="/readings/2026-07-05-matins.html">2026-07-05-matins</a></li>
-</ul>
-<p><a href="/">Back to today</a></p>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystoica — Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E9E2CE; --paper-dark:#DED4B9; --ink:#2A2620; --ink-soft:#58503f;
+    --stamp:#9C3B26; --carbon:#3D4A63; --hairline:#b7ab8c; --thread:#8a3226;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Spectral',Georgia,serif;font-size:18px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:680px;margin:0 auto;padding:56px 24px 100px;}
+
+  header{display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--hairline);padding-bottom:20px;margin-bottom:34px;}
+  .word{font-size:1.7rem;font-weight:600;letter-spacing:0.03em;display:block;}
+  .sub{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-soft);}
+
+  .intro{font-style:italic;color:var(--ink-soft);font-size:1rem;line-height:1.6;margin:0 0 32px;}
+
+  .archive-list{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;}
+
+  .archive-row{
+    display:flex;justify-content:space-between;align-items:center;
+    border:1px solid var(--hairline);background:var(--paper-dark);
+    padding:14px 18px;text-decoration:none;color:inherit;
+    transition:transform 0.15s ease;
+  }
+  .archive-row:hover{ transform:translateX(2px); }
+
+  .archive-date{
+    font-family:'IBM Plex Mono',monospace;font-size:0.86rem;color:var(--ink);
+  }
+  .archive-slot{
+    font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.06em;
+    text-transform:uppercase;color:var(--stamp);margin-left:10px;
+  }
+  .archive-arrow{
+    font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--carbon);
+  }
+
+  .back-link{
+    display:block;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:0.74rem;
+    color:var(--carbon);text-decoration:none;border-top:1px solid var(--hairline);padding-top:20px;
+  }
+
+  @media (max-width:600px){
+    .wrap{padding:36px 16px 70px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <svg width="30" height="30" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="#9C3B26" stroke-width="3" stroke-dasharray="205 45" transform="rotate(-15 50 50)"/>
+      <path d="M50 30 L67.3 60 L32.7 60 Z" fill="none" stroke="#8a3226" stroke-width="1" stroke-dasharray="2 3" opacity="0.7"/>
+      <circle cx="50" cy="30" r="3.4" fill="#9C3B26"/>
+      <circle cx="67.3" cy="60" r="3.4" fill="#9C3B26"/>
+      <circle cx="32.7" cy="60" r="3.4" fill="#9C3B26"/>
+    </svg>
+    <div>
+      <span class="word">MYSTOICA</span>
+      <span class="sub">archive</span>
+    </div>
+  </header>
+
+  <p class="intro">Every reading published, unedited, in order.</p>
+
+  <div class="archive-list">
+    <a class="archive-row" href="/readings/2026-07-05-sext.html">
+      <span class="archive-date">2026-07-05<span class="archive-slot">Sext</span></span>
+      <span class="archive-arrow">→</span>
+    </a>
+
+    <a class="archive-row" href="/readings/2026-07-05-matins.html">
+      <span class="archive-date">2026-07-05<span class="archive-slot">Matins</span></span>
+      <span class="archive-arrow">→</span>
+    </a>
+  </div>
+
+  <a class="back-link" href="/">← Back to today</a>
+
+</div>
 </body>
 </html>
