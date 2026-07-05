@@ -254,26 +254,27 @@ def regenerate_archive():
     if not os.path.isdir("readings"):
         return
     files = sorted(os.listdir("readings"), reverse=True)
-    items = []
+    slot_labels = {"matins": "Matins", "sext": "Sext", "vespers": "Vespers"}
+    rows = []
     for fname in files:
         if not fname.endswith(".html"):
             continue
         label = fname.replace(".html", "")
-        items.append(f'    <li><a href="/readings/{fname}">{label}</a></li>')
+        parts = label.rsplit("-", 1)
+        date_part = parts[0] if len(parts) == 2 else label
+        slot_part = parts[1] if len(parts) == 2 else ""
+        slot_display = slot_labels.get(slot_part, slot_part.capitalize())
+        rows.append(f'''    <a class="archive-row" href="/readings/{fname}">
+      <span class="archive-date">{date_part}<span class="archive-slot">{slot_display}</span></span>
+      <span class="archive-arrow">→</span>
+    </a>''')
 
-    archive_html = f"""<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="UTF-8"><title>Mystoica — Archive</title></head>
-<body style="font-family:Georgia,serif;max-width:640px;margin:60px auto;">
-<h1>Archive</h1>
-<ul>
-{chr(10).join(items)}
-</ul>
-<p><a href="/">Back to today</a></p>
-</body>
-</html>"""
+    with open("templates/archive_template.html", "r", encoding="utf-8") as f:
+        tpl = f.read()
+    tpl = tpl.replace("__ARCHIVE_ROWS__", "\n\n".join(rows))
+
     with open("archive.html", "w", encoding="utf-8") as f:
-        f.write(archive_html)
+        f.write(tpl)
 
 def main():
     if len(sys.argv) < 2:
