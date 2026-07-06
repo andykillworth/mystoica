@@ -133,7 +133,7 @@
   <section>
     <p class="section-label">How it's built</p>
     <ul class="steps">
-      <li><span class="n">01</span> A scheduled job (GitHub Actions) triggers three times daily.</li>
+      <li><span class="n">01</span> An external scheduler calls GitHub's API three times a day to start the pipeline.</li>
       <li><span class="n">02</span> Claude searches obscure sources and drafts that dispatch's reading.</li>
       <li><span class="n">03</span> The text is dropped into a fixed template — nothing is hand-edited.</li>
       <li><span class="n">04</span> The page is committed to a public repository, which is also the archive.</li>
