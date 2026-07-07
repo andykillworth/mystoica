@@ -1,16 +1,10 @@
 name: Publish Mystoica Reading
 
 on:
-  schedule:
-    # All times UTC. Adjust to taste — these correspond to
-    # roughly 08:00, 14:00, 20:00 in London during BST.
-    - cron: '0 7 * * *'   # Matins
-    - cron: '0 13 * * *'  # Sext
-    - cron: '0 19 * * *'  # Vespers
   workflow_dispatch:
     inputs:
       slot:
-        description: 'Which slot to generate (for manual testing)'
+        description: 'Which slot to generate'
         required: true
         default: 'matins'
         type: choice
