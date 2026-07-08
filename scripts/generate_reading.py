@@ -2,7 +2,7 @@
 """
 Mystoica pipeline script.
 
-Called three times a day (matins / sext / vespers) by GitHub Actions.
+Called three times a day (matins / sext / vespers) by an external scheduler.
 1. Scans previous readings to build a list of already-used sources.
 2. Calls Claude with web search enabled, asking for a structured JSON reading
    built from real, obscure public-record sources NOT already used.
@@ -50,8 +50,10 @@ Voice rules:
 - Confident, declarative, literary. Never hedge.
 - The facts must be 100% real and cited with a real working URL.
 - The connections must be invented, but delivered as if genuine.
-- Follow the exact JSON schema given. Output ONLY valid JSON, no preamble,
-  no markdown fences, nothing else.
+- Follow the exact JSON schema given. Output ONLY valid, strictly well-formed
+  JSON — no preamble, no markdown fences, nothing else. All text values must
+  be single-line: never include literal newlines or raw control characters
+  inside a string; use plain spaces instead of line breaks within any value.
 
 JSON schema:
 {
@@ -158,7 +160,10 @@ def call_claude(slot: str, date_str: str, used_sources: list) -> dict:
 
     json_str = full_text[start:end + 1]
     try:
-        return json.loads(json_str)
+        # strict=False allows literal control characters (like stray newlines)
+        # inside string values, which the model occasionally emits despite
+        # instructions — this is the fix for the "Invalid control character" error.
+        return json.loads(json_str, strict=False)
     except json.JSONDecodeError:
         print("---- RAW MODEL OUTPUT (failed to parse as JSON) ----")
         print(full_text)
