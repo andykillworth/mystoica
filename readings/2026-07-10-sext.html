@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystoica — Sext Reading, Friday, July 10, 2026</title>
+<link rel="canonical" href="https://mystoica.com/readings/2026-07-10-sext.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #E9E2CE;
+    --paper-dark: #DED4B9;
+    --ink: #2A2620;
+    --ink-soft: #58503f;
+    --stamp: #9C3B26;
+    --carbon: #3D4A63;
+    --hairline: #b7ab8c;
+    --thread: #8a3226;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Spectral', Georgia, serif;
+    font-size:18px;
+  }
+
+  body{
+    background-image:
+      radial-gradient(ellipse at top left, rgba(255,255,255,0.25), transparent 45%),
+      radial-gradient(ellipse at bottom right, rgba(0,0,0,0.05), transparent 50%);
+  }
+
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 24px 100px;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:1px solid var(--hairline);
+    padding-bottom:22px;
+    margin-bottom:40px;
+  }
+
+  .wordmark{ font-size:2.1rem; letter-spacing:0.04em; font-weight:600; margin:0; }
+  .wordmark a{ color:inherit; text-decoration:none; }
+
+  .tagline{
+    margin:4px 0 0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .case-no{
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    line-height:1.6;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    padding-top:6px;
+  }
+  .case-no strong{ color:var(--ink); }
+
+  .intro{
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin:0 0 34px;
+  }
+
+  .exhibits{ display:flex; flex-direction:column; gap:18px; margin-bottom:44px; }
+
+  .exhibit{
+    position:relative;
+    background:var(--paper-dark);
+    border:1px solid var(--hairline);
+    padding:20px 22px 18px;
+  }
+
+  .exhibit-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .exhibit-tag::before{
+    content:"";
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--stamp);
+    display:inline-block;
+  }
+
+  .exhibit-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+
+  .exhibit-fact{ font-size:1.08rem; line-height:1.55; margin:8px 0 12px; }
+
+  .exhibit-source{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--hairline);
+    padding-top:8px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .exhibit-source a{ color:var(--carbon); text-decoration:none; border-bottom:1px solid var(--carbon); }
+  .exhibit-source a:hover{ opacity:0.7; }
+
+  .thread-row{ display:flex; justify-content:center; margin: -6px 0; }
+  .thread-row svg{ display:block; }
+
+  .symbols{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:linear-gradient(180deg, rgba(255,255,255,0.3), transparent 40%);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .symbols .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .symbol-list{ margin:0 0 16px; }
+  .symbol-item{ margin-bottom:14px; }
+  .symbol-item:last-child{ margin-bottom:0; }
+
+  .symbol-item dt{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    margin-bottom:5px;
+  }
+
+  .symbol-item dd{ margin:0; font-size:0.96rem; line-height:1.6; color:var(--ink); }
+  .symbol-item dd em{ font-style:italic; color:var(--ink-soft); }
+
+  .symbol-synthesis{
+    font-size:1.02rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:14px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .numerology{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:var(--paper-dark);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .numerology .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .num-table{ width:100%; border-collapse:collapse; margin-bottom:14px; font-family:'IBM Plex Mono', monospace; font-size:0.82rem; }
+  .num-table td{ padding:6px 0; border-bottom:1px dashed var(--hairline); color:var(--ink); }
+  .num-table tr:last-child td{ border-bottom:none; }
+  .num-reduce{ text-align:right; color:var(--stamp); white-space:nowrap; width:60px; }
+
+  .num-callout{ font-size:0.98rem; line-height:1.6; margin:0 0 12px; color:var(--ink); }
+  .num-callout strong{ font-family:'IBM Plex Mono', monospace; color:var(--stamp); font-size:1.05rem; }
+
+  .num-synthesis{
+    font-size:0.96rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:12px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .theory{
+    position:relative;
+    border-left:3px solid var(--carbon);
+    background:var(--paper-dark);
+    padding:18px 22px 20px;
+    margin-bottom:26px;
+  }
+  .theory .verdict-label{ position:static; display:inline-block; background:none; padding:0; color:var(--carbon); margin-bottom:8px; }
+  .theory-text{ font-size:0.96rem; line-height:1.6; color:var(--ink); margin:0; }
+
+  .cascade{
+    position:relative;
+    border:1px solid var(--ink);
+    padding:36px 30px 30px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px);
+  }
+
+  .verdict-label{
+    position:absolute;
+    top:-11px;
+    left:26px;
+    background:var(--paper);
+    padding:0 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .cascade-intro{ font-size:1.02rem; line-height:1.6; font-style:italic; color:var(--ink-soft); margin:6px 0 26px; }
+  .cascade-intro em{ color:var(--ink); font-style:italic; }
+
+  .cascade-chain{ position:relative; padding-left:30px; margin-bottom:26px; }
+  .cascade-chain::before{
+    content:"";
+    position:absolute;
+    left:9px; top:6px; bottom:6px; width:1px;
+    background:repeating-linear-gradient(to bottom, var(--thread) 0 4px, transparent 4px 8px);
+    opacity:0.55;
+  }
+
+  .cascade-step{ position:relative; margin-bottom:20px; }
+  .cascade-step:last-child{ margin-bottom:0; }
+
+  .cascade-node{
+    position:absolute;
+    left:-30px; top:1px;
+    width:19px; height:19px;
+    border-radius:50%;
+    background:var(--paper);
+    border:1px solid var(--thread);
+    color:var(--thread);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .cascade-step p{ font-size:0.98rem; line-height:1.6; margin:0; }
+
+  .cascade-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    color:var(--carbon);
+    text-transform:uppercase;
+  }
+
+  .cascade-outro{
+    font-size:1.2rem;
+    line-height:1.6;
+    font-style:italic;
+    font-weight:500;
+    margin:0;
+    padding-top:16px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .stamp-seal{
+    position:absolute;
+    right:22px; bottom:18px;
+    width:92px; height:92px;
+    border:2.5px solid var(--stamp);
+    border-radius:50%;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    transform:rotate(-11deg) scale(0.85);
+    mix-blend-mode:multiply;
+  }
+  .stamp-seal::before{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--stamp);
+    border-radius:50%;
+  }
+
+  footer{
+    margin-top:48px;
+    padding-top:18px;
+    border-top:1px solid var(--hairline);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  @media (max-width:600px){
+    .wrap{ padding:36px 16px 70px; }
+    header{ flex-direction:column; gap:14px; }
+    .case-no{ text-align:left; }
+    .wordmark{ font-size:1.7rem; }
+    .stamp-seal{ position:static; margin-top:18px; transform:rotate(-11deg) scale(0.85); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <p class="wordmark"><a href="/">MYSTOICA</a></p>
+      <p class="tagline">Sext — a reading, three times daily</p>
+    </div>
+    <div class="case-no">
+      <div>Case No. <strong>2026.0710-S</strong></div>
+      <div>Sourced around 13:00</div>
+      <div>Mainstream press excluded</div>
+    </div>
+  </header>
+
+  <p class="intro">Three unrelated filings surfaced within the same seventy-two hours, each one a record of something passing from one custody to another without the knowledge of the party it passed through.</p>
+
+  <div class="exhibits">
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit A — Filed</div>
+      <div class="exhibit-loc">Lewiston, New York</div>
+      <p class="exhibit-fact">In the 800 block of Oriole Drive, a 911 caller reported two males fighting over a female, with one male still on location when patrol arrived, as logged in the Lewiston Police Department's blotter for the week of June 29 to July 5, 2026.</p>
+      <div class="exhibit-source">
+        <span>Lewiston Police Department Blotter — WNY Papers</span>
+        <a href="http://www.wnypapers.com/news/article/current/2026/07/10/166510/lewiston-police-department-blotter-for-july-10-2026" target="_blank" rel="noopener">www.wnypapers.com ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 -4 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit B — Filed</div>
+      <div class="exhibit-loc">Sand Lake / Troy, New York</div>
+      <p class="exhibit-fact">Paul J. Lyons, 37, of Troy, was arrested on a petit larceny charge for a larceny from a building reported in the Town of Sand Lake, with the arrest itself executed at a separate location code in the City of Troy, according to New York State Police Troop G's public information report.</p>
+      <div class="exhibit-source">
+        <span>NYSP Troop G Public Information Report</span>
+        <a href="https://publicapps.troopers.ny.gov/media/TroopG/MediaWed1.pdf" target="_blank" rel="noopener">publicapps.troopers.ny.gov ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 20 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit C — Filed</div>
+      <div class="exhibit-loc">San Carlos, Chile / Publix stores, southeastern U.S.</div>
+      <p class="exhibit-fact">The FDA and CDC are investigating a multistate E. coli O145:H28 outbreak linked to frozen GreenWise-brand organic blueberries distributed by Frutas y Hortalizas del Sur S.A. of San Carlos, Chile, with the recalled 10-oz. lot bearing a printed lot code of 60401 and shipped to Publix stores across eight states.</p>
+      <div class="exhibit-source">
+        <span>FDA Outbreak Investigation of E. coli: Frozen Blueberries</span>
+        <a href="https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-frozen-blueberries-july-2026" target="_blank" rel="noopener">www.fda.gov ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="symbols">
+    <span class="verdict-label">Symbolic Notes</span>
+    <dl class="symbol-list">
+      <div class="symbol-item">
+        <dt>A — The Contested Body</dt>
+        <dd>Two men fighting over a woman on Oriole Drive is not a love triangle but a custody dispute over a body treated as property. The street name itself, a bird of prey, marks the scene as one of claim and counter-claim.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>B — The Displaced Object</dt>
+        <dd>An object leaves a building in Sand Lake and its owner is arrested in Troy, a jurisdictional gap where the thing and the person who took it are never in the same official place at once. This is custody broken across geography.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>C — The Hidden Passenger</dt>
+        <dd>A berry grown in San Carlos, Chile carries a pathogen invisible until it reaches a stranger's body in Florida. The fruit is a courier that does not know what it is carrying, and neither does anyone who eats it.</dd>
+      </div>
+    </dl>
+    <p class="symbol-synthesis">Each exhibit is a custody chain with a break in it — a body, an object, and a food item all traveling through hands that do not fully know what they hold or where the holding will end.</p>
+  </div>
+
+  <div class="numerology">
+    <span class="verdict-label">Numerology</span>
+    <table class="num-table">
+      <tbody>
+        <tr><td>Oriole Drive block number (800)</td><td class="num-reduce">→ 8</td></tr>
+        <tr><td>Paul Lyons' age (37)</td><td class="num-reduce">→ 1</td></tr>
+        <tr><td>Sand Lake location code (4260)</td><td class="num-reduce">→ 3</td></tr>
+        <tr><td>Blueberry lot code (60401)</td><td class="num-reduce">→ 2</td></tr>
+        <tr><td>Confirmed E. coli case count (12)</td><td class="num-reduce">→ 3</td></tr>
+      </tbody>
+    </table>
+    <p class="num-callout">The digit 3 surfaces twice, once from the location code of the larceny and once from the outbreak's case count, marking both filings as sites of incomplete accounting.</p>
+    <p class="num-synthesis">A double 3 suggests a triangulation error common to all three exhibits: a third party — the second male, the second jurisdiction, the second state of illness — that the record notices but cannot fully resolve.</p>
+  </div>
+
+  <div class="theory">
+    <span class="verdict-label">Working Theory — The Adjacency Clause</span>
+    <p class="theory-text">The Adjacency Clause holds that objects, bodies, and organisms recorded within the same reporting window develop a false but functional kinship, as if proximity in the filing system were itself a form of custody. Under this reading, the Oriole Drive dispute, the Sand Lake larceny, and the San Carlos contamination are not three stories but one story told in three jurisdictions, each missing the piece the others hold. The fighting men do not know they are enacting the same failure of possession as the berry passing borders undetected. The clause insists that when a public record cannot say where a thing properly belongs, that thing has already begun to belong to something else.</p>
+  </div>
+
+  <div class="cascade">
+    <span class="verdict-label">The Cascade</span>
+    <p class="cascade-intro">Trace the custody failure forward and a five-step chain of transfer emerges, each link losing a little more certainty than the last.</p>
+
+    <div class="cascade-chain">
+      <div class="cascade-step">
+        <div class="cascade-node">1</div>
+        <p><span class="cascade-loc">Lewiston, New York</span> — A woman is fought over on a residential street named for a bird that hunts by sight, and possession of her is contested in the open.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">2</div>
+        <p><span class="cascade-loc">Sand Lake, New York</span> — An object is removed from a building without its owner's knowledge, the first quiet transfer of custody in the sequence.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">3</div>
+        <p><span class="cascade-loc">Troy, New York</span> — The person who took the object is finally caught, but only after the object and the person occupy two separate location codes — the custody trail forks.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">4</div>
+        <p><span class="cascade-loc">San Carlos, Chile</span> — A berry carrying an unseen strain of E. coli is packed into a 10-oz. bag under lot code 60401, its contamination as undetectable as the object's earlier removal.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">5</div>
+        <p><span class="cascade-loc">Publix stores, eight states</span> — The berry reaches a stranger's freezer across state lines, completing a transfer that began as fighting over a person and ends as a pathogen inside a body that never consented to hold it.</p>
+      </div>
+    </div>
+
+    <p class="cascade-outro">What begins as a claim on a body ends as a body's silent claim on a stranger — custody, once broken, does not stop moving.</p>
+    <div class="stamp-seal">so<br>transferred</div>
+  </div>
+
+  <footer>
+    <span>Sources cited, connections invented.</span>
+    <span>Next: Vespers</span>
+  </footer>
+
+</div>
+</body>
+</html>
