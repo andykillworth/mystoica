@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystoica — Sext Reading, Saturday, July 18, 2026</title>
+<link rel="canonical" href="https://mystoica.com/readings/2026-07-18-sext.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #E9E2CE;
+    --paper-dark: #DED4B9;
+    --ink: #2A2620;
+    --ink-soft: #58503f;
+    --stamp: #9C3B26;
+    --carbon: #3D4A63;
+    --hairline: #b7ab8c;
+    --thread: #8a3226;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Spectral', Georgia, serif;
+    font-size:18px;
+  }
+
+  body{
+    background-image:
+      radial-gradient(ellipse at top left, rgba(255,255,255,0.25), transparent 45%),
+      radial-gradient(ellipse at bottom right, rgba(0,0,0,0.05), transparent 50%);
+  }
+
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 24px 100px;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:1px solid var(--hairline);
+    padding-bottom:22px;
+    margin-bottom:40px;
+  }
+
+  .wordmark{ font-size:2.1rem; letter-spacing:0.04em; font-weight:600; margin:0; }
+  .wordmark a{ color:inherit; text-decoration:none; }
+
+  .tagline{
+    margin:4px 0 0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .case-no{
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    line-height:1.6;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    padding-top:6px;
+  }
+  .case-no strong{ color:var(--ink); }
+
+  .intro{
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin:0 0 34px;
+  }
+
+  .exhibits{ display:flex; flex-direction:column; gap:18px; margin-bottom:44px; }
+
+  .exhibit{
+    position:relative;
+    background:var(--paper-dark);
+    border:1px solid var(--hairline);
+    padding:20px 22px 18px;
+  }
+
+  .exhibit-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .exhibit-tag::before{
+    content:"";
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--stamp);
+    display:inline-block;
+  }
+
+  .exhibit-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+
+  .exhibit-fact{ font-size:1.08rem; line-height:1.55; margin:8px 0 12px; }
+
+  .exhibit-source{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--hairline);
+    padding-top:8px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .exhibit-source a{ color:var(--carbon); text-decoration:none; border-bottom:1px solid var(--carbon); }
+  .exhibit-source a:hover{ opacity:0.7; }
+
+  .thread-row{ display:flex; justify-content:center; margin: -6px 0; }
+  .thread-row svg{ display:block; }
+
+  .symbols{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:linear-gradient(180deg, rgba(255,255,255,0.3), transparent 40%);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .symbols .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .symbol-list{ margin:0 0 16px; }
+  .symbol-item{ margin-bottom:14px; }
+  .symbol-item:last-child{ margin-bottom:0; }
+
+  .symbol-item dt{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    margin-bottom:5px;
+  }
+
+  .symbol-item dd{ margin:0; font-size:0.96rem; line-height:1.6; color:var(--ink); }
+  .symbol-item dd em{ font-style:italic; color:var(--ink-soft); }
+
+  .symbol-synthesis{
+    font-size:1.02rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:14px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .numerology{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:var(--paper-dark);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .numerology .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .num-table{ width:100%; border-collapse:collapse; margin-bottom:14px; font-family:'IBM Plex Mono', monospace; font-size:0.82rem; }
+  .num-table td{ padding:6px 0; border-bottom:1px dashed var(--hairline); color:var(--ink); }
+  .num-table tr:last-child td{ border-bottom:none; }
+  .num-reduce{ text-align:right; color:var(--stamp); white-space:nowrap; width:60px; }
+
+  .num-callout{ font-size:0.98rem; line-height:1.6; margin:0 0 12px; color:var(--ink); }
+  .num-callout strong{ font-family:'IBM Plex Mono', monospace; color:var(--stamp); font-size:1.05rem; }
+
+  .num-synthesis{
+    font-size:0.96rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:12px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .theory{
+    position:relative;
+    border-left:3px solid var(--carbon);
+    background:var(--paper-dark);
+    padding:18px 22px 20px;
+    margin-bottom:26px;
+  }
+  .theory .verdict-label{ position:static; display:inline-block; background:none; padding:0; color:var(--carbon); margin-bottom:8px; }
+  .theory-text{ font-size:0.96rem; line-height:1.6; color:var(--ink); margin:0; }
+
+  .cascade{
+    position:relative;
+    border:1px solid var(--ink);
+    padding:36px 30px 30px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px);
+  }
+
+  .verdict-label{
+    position:absolute;
+    top:-11px;
+    left:26px;
+    background:var(--paper);
+    padding:0 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .cascade-intro{ font-size:1.02rem; line-height:1.6; font-style:italic; color:var(--ink-soft); margin:6px 0 26px; }
+  .cascade-intro em{ color:var(--ink); font-style:italic; }
+
+  .cascade-chain{ position:relative; padding-left:30px; margin-bottom:26px; }
+  .cascade-chain::before{
+    content:"";
+    position:absolute;
+    left:9px; top:6px; bottom:6px; width:1px;
+    background:repeating-linear-gradient(to bottom, var(--thread) 0 4px, transparent 4px 8px);
+    opacity:0.55;
+  }
+
+  .cascade-step{ position:relative; margin-bottom:20px; }
+  .cascade-step:last-child{ margin-bottom:0; }
+
+  .cascade-node{
+    position:absolute;
+    left:-30px; top:1px;
+    width:19px; height:19px;
+    border-radius:50%;
+    background:var(--paper);
+    border:1px solid var(--thread);
+    color:var(--thread);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .cascade-step p{ font-size:0.98rem; line-height:1.6; margin:0; }
+
+  .cascade-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    color:var(--carbon);
+    text-transform:uppercase;
+  }
+
+  .cascade-outro{
+    font-size:1.2rem;
+    line-height:1.6;
+    font-style:italic;
+    font-weight:500;
+    margin:0;
+    padding-top:16px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .stamp-seal{
+    position:absolute;
+    right:22px; bottom:18px;
+    width:92px; height:92px;
+    border:2.5px solid var(--stamp);
+    border-radius:50%;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    transform:rotate(-11deg) scale(0.85);
+    mix-blend-mode:multiply;
+  }
+  .stamp-seal::before{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--stamp);
+    border-radius:50%;
+  }
+
+  footer{
+    margin-top:48px;
+    padding-top:18px;
+    border-top:1px solid var(--hairline);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  @media (max-width:600px){
+    .wrap{ padding:36px 16px 70px; }
+    header{ flex-direction:column; gap:14px; }
+    .case-no{ text-align:left; }
+    .wordmark{ font-size:1.7rem; }
+    .stamp-seal{ position:static; margin-top:18px; transform:rotate(-11deg) scale(0.85); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <p class="wordmark"><a href="/">MYSTOICA</a></p>
+      <p class="tagline">Sext — a reading, three times daily</p>
+    </div>
+    <div class="case-no">
+      <div>Case No. <strong>2026.0718-S</strong></div>
+      <div>Sourced around 13:00</div>
+      <div>Mainstream press excluded</div>
+    </div>
+  </header>
+
+  <p class="intro">Three filings surface this week, each hiding its true content on the reverse of the thing meant to be seen.</p>
+
+  <div class="exhibits">
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit A — Filed</div>
+      <div class="exhibit-loc">Pequot Lakes / Crow Wing County, MN</div>
+      <p class="exhibit-fact">At 8:08 a.m. on July 8, 2026, Crow Wing County authorities logged the theft of a Glock 42 pistol from a magnetic holder mounted under a steering wheel while the vehicle sat parked at an Airbnb on Eagle Lane, and a review of the property's own camera turned up nothing suspicious around the vehicle.</p>
+      <div class="exhibit-source">
+        <span>Pine and Lakes Echo Journal — Police Blotter, July 18, 2026</span>
+        <a href="https://www.pineandlakes.com/news/local/police-blotter-july-18-2026-drugged-drivers-and-fatal-crashes" target="_blank" rel="noopener">www.pineandlakes.com ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 -4 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit B — Filed</div>
+      <div class="exhibit-loc">Upper Darby Township, PA</div>
+      <p class="exhibit-fact">Delaware County's live dispatch feed shows that at 7:50:26 p.m. on July 17, 2026, a call was logged at 2230 Dermond Avenue in Upper Darby Township under the nature code ASSIST FD TO ASSIST POLICE, tagged with the note OPERATE EAST FIRE under Incident F26051896.</p>
+      <div class="exhibit-source">
+        <span>Delco Dispatch — Live Call Log</span>
+        <a href="https://delcodispat.ch/" target="_blank" rel="noopener">delcodispat.ch ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 20 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit C — Filed</div>
+      <div class="exhibit-loc">Nine-State Distribution (FW Farms LLC / Kroger & Fred Meyer)</div>
+      <p class="exhibit-fact">FSIS announced that raw honey Dijon boneless chicken breast products contained eggs, a known allergen, which is not declared on the product label, with the products having been produced on June 2, 2026, in 21-oz. vacuum-packed packages bearing lot code 15326A and establishment number P-45288B, shipped to Kroger and Fred Meyer stores across nine states.</p>
+      <div class="exhibit-source">
+        <span>FSIS Public Health Alert PHA-06252026 (FW Farms LLC)</span>
+        <a href="https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-boneless-chicken-breast-product-due-misbranding-and" target="_blank" rel="noopener">www.fsis.usda.gov ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="symbols">
+    <span class="verdict-label">Symbolic Notes</span>
+    <dl class="symbol-list">
+      <div class="symbol-item">
+        <dt>A — The Underside Weapon</dt>
+        <dd>A firearm kept beneath the driver, invisible until it is gone; the theft occurs not in the home but in the temporary shelter of someone else's walls, where trust in the unfamiliar becomes the entry point.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>B — The Loop-Back Call</dt>
+        <dd>A fire dispatch that exists only to summon police to assist fire, a service folding in on itself; the emergency does not move outward, it recurses, calling its own name twice before anyone arrives.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>C — The Split Label</dt>
+        <dd>A product wearing two faces, the front honest and the back withholding; the allergen does not vanish, it simply relocates to the side no one is instructed to check first.</dd>
+      </div>
+    </dl>
+    <p class="symbol-synthesis">Each exhibit conceals its真 truth on a reverse or underside — beneath a wheel, inside a looping call, on the back of a label — suggesting that this week's danger does not hide by disappearing, but by turning around.</p>
+  </div>
+
+  <div class="numerology">
+    <span class="verdict-label">Numerology</span>
+    <table class="num-table">
+      <tbody>
+        <tr><td>Theft logged at 8:08 a.m.</td><td class="num-reduce">→ 7</td></tr>
+        <tr><td>Dermond Avenue street number (2230)</td><td class="num-reduce">→ 7</td></tr>
+        <tr><td>Establishment number P-45288B</td><td class="num-reduce">→ 9</td></tr>
+        <tr><td>Lot code 15326A</td><td class="num-reduce">→ 8</td></tr>
+        <tr><td>Incident number F26051896</td><td class="num-reduce">→ 1</td></tr>
+      </tbody>
+    </table>
+    <p class="num-callout">Seven appears twice — once in the hour of the theft, once in the address of the loop-back call — a digit repeating across two states before the chain even reaches its third body.</p>
+    <p class="num-synthesis">The double seven marks a threshold crossed twice in the same week, while the descending remainder — nine, eight, one — reads like a countdown toward a single point of closure where all three files quietly converge.</p>
+  </div>
+
+  <div class="theory">
+    <span class="verdict-label">Working Theory — The Adjacency Clause</span>
+    <p class="theory-text">Under the working Adjacency Clause, no public record stands alone in its reporting week; any three filings surfacing within the same rolling window are treated as evidence of a shared substrate, three separate bodies briefly hosting the same obscured event. This week, that substrate is reversal — the fact that hides is never erased, only relocated to whichever surface faces away from the reader.</p>
+  </div>
+
+  <div class="cascade">
+    <span class="verdict-label">The Cascade</span>
+    <p class="cascade-intro">The custody trace runs from a Minnesota dashboard to a Pennsylvania rowhouse to a nine-state shipping manifest, in five moves:</p>
+
+    <div class="cascade-chain">
+      <div class="cascade-step">
+        <div class="cascade-node">1</div>
+        <p><span class="cascade-loc">Pequot Lakes, MN</span> — Before eight in the morning, a magnetic holster gives up its weapon at an Airbnb parking pad, and the vehicle drives on carrying an absence instead of a firearm.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">2</div>
+        <p>That absence does not close the file; it travels, the hour of the theft already reducing to seven, a number that will not stay contained to Crow Wing County.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">3</div>
+        <p><span class="cascade-loc">Upper Darby Township, PA</span> — Nine days later, Delaware County's dispatch loop calls fire to assist police to assist fire at 2230 Dermond Avenue, and the street number reduces to the same seven, confirming the route rather than explaining it.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">4</div>
+        <p>While that loop still holds, a shipment of honey Dijon chicken breast moves toward Kroger and Fred Meyer shelves wearing a front label that tells the truth and a back label that does not, the allergen hiding exactly where the theft and the loop-back call already taught this week's record to hide things.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">5</div>
+        <p>The establishment stamp on the meat, P-45288B, reduces to nine — one shy of the ten that would close the count entirely — and the file is left open on purpose, the reverse side still facing away from whoever reads it first.</p>
+      </div>
+    </div>
+
+    <p class="cascade-outro">The obscured face is not a hiding place; it is where this week's record was always going to keep its facts.</p>
+    <div class="stamp-seal">so<br>noted</div>
+  </div>
+
+  <footer>
+    <span>Sources cited, connections invented.</span>
+    <span>Next: Vespers</span>
+  </footer>
+
+</div>
+</body>
+</html>
