@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystoica — Sext Reading, Sunday, July 19, 2026</title>
+<link rel="canonical" href="https://mystoica.com/readings/2026-07-19-sext.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #E9E2CE;
+    --paper-dark: #DED4B9;
+    --ink: #2A2620;
+    --ink-soft: #58503f;
+    --stamp: #9C3B26;
+    --carbon: #3D4A63;
+    --hairline: #b7ab8c;
+    --thread: #8a3226;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Spectral', Georgia, serif;
+    font-size:18px;
+  }
+
+  body{
+    background-image:
+      radial-gradient(ellipse at top left, rgba(255,255,255,0.25), transparent 45%),
+      radial-gradient(ellipse at bottom right, rgba(0,0,0,0.05), transparent 50%);
+  }
+
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 24px 100px;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:1px solid var(--hairline);
+    padding-bottom:22px;
+    margin-bottom:40px;
+  }
+
+  .wordmark{ font-size:2.1rem; letter-spacing:0.04em; font-weight:600; margin:0; }
+  .wordmark a{ color:inherit; text-decoration:none; }
+
+  .tagline{
+    margin:4px 0 0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .case-no{
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    line-height:1.6;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    padding-top:6px;
+  }
+  .case-no strong{ color:var(--ink); }
+
+  .intro{
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin:0 0 34px;
+  }
+
+  .exhibits{ display:flex; flex-direction:column; gap:18px; margin-bottom:44px; }
+
+  .exhibit{
+    position:relative;
+    background:var(--paper-dark);
+    border:1px solid var(--hairline);
+    padding:20px 22px 18px;
+  }
+
+  .exhibit-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .exhibit-tag::before{
+    content:"";
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--stamp);
+    display:inline-block;
+  }
+
+  .exhibit-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+
+  .exhibit-fact{ font-size:1.08rem; line-height:1.55; margin:8px 0 12px; }
+
+  .exhibit-source{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--hairline);
+    padding-top:8px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .exhibit-source a{ color:var(--carbon); text-decoration:none; border-bottom:1px solid var(--carbon); }
+  .exhibit-source a:hover{ opacity:0.7; }
+
+  .thread-row{ display:flex; justify-content:center; margin: -6px 0; }
+  .thread-row svg{ display:block; }
+
+  .symbols{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:linear-gradient(180deg, rgba(255,255,255,0.3), transparent 40%);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .symbols .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .symbol-list{ margin:0 0 16px; }
+  .symbol-item{ margin-bottom:14px; }
+  .symbol-item:last-child{ margin-bottom:0; }
+
+  .symbol-item dt{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    margin-bottom:5px;
+  }
+
+  .symbol-item dd{ margin:0; font-size:0.96rem; line-height:1.6; color:var(--ink); }
+  .symbol-item dd em{ font-style:italic; color:var(--ink-soft); }
+
+  .symbol-synthesis{
+    font-size:1.02rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:14px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .numerology{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:var(--paper-dark);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .numerology .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .num-table{ width:100%; border-collapse:collapse; margin-bottom:14px; font-family:'IBM Plex Mono', monospace; font-size:0.82rem; }
+  .num-table td{ padding:6px 0; border-bottom:1px dashed var(--hairline); color:var(--ink); }
+  .num-table tr:last-child td{ border-bottom:none; }
+  .num-reduce{ text-align:right; color:var(--stamp); white-space:nowrap; width:60px; }
+
+  .num-callout{ font-size:0.98rem; line-height:1.6; margin:0 0 12px; color:var(--ink); }
+  .num-callout strong{ font-family:'IBM Plex Mono', monospace; color:var(--stamp); font-size:1.05rem; }
+
+  .num-synthesis{
+    font-size:0.96rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:12px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .theory{
+    position:relative;
+    border-left:3px solid var(--carbon);
+    background:var(--paper-dark);
+    padding:18px 22px 20px;
+    margin-bottom:26px;
+  }
+  .theory .verdict-label{ position:static; display:inline-block; background:none; padding:0; color:var(--carbon); margin-bottom:8px; }
+  .theory-text{ font-size:0.96rem; line-height:1.6; color:var(--ink); margin:0; }
+
+  .cascade{
+    position:relative;
+    border:1px solid var(--ink);
+    padding:36px 30px 30px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px);
+  }
+
+  .verdict-label{
+    position:absolute;
+    top:-11px;
+    left:26px;
+    background:var(--paper);
+    padding:0 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .cascade-intro{ font-size:1.02rem; line-height:1.6; font-style:italic; color:var(--ink-soft); margin:6px 0 26px; }
+  .cascade-intro em{ color:var(--ink); font-style:italic; }
+
+  .cascade-chain{ position:relative; padding-left:30px; margin-bottom:26px; }
+  .cascade-chain::before{
+    content:"";
+    position:absolute;
+    left:9px; top:6px; bottom:6px; width:1px;
+    background:repeating-linear-gradient(to bottom, var(--thread) 0 4px, transparent 4px 8px);
+    opacity:0.55;
+  }
+
+  .cascade-step{ position:relative; margin-bottom:20px; }
+  .cascade-step:last-child{ margin-bottom:0; }
+
+  .cascade-node{
+    position:absolute;
+    left:-30px; top:1px;
+    width:19px; height:19px;
+    border-radius:50%;
+    background:var(--paper);
+    border:1px solid var(--thread);
+    color:var(--thread);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .cascade-step p{ font-size:0.98rem; line-height:1.6; margin:0; }
+
+  .cascade-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    color:var(--carbon);
+    text-transform:uppercase;
+  }
+
+  .cascade-outro{
+    font-size:1.2rem;
+    line-height:1.6;
+    font-style:italic;
+    font-weight:500;
+    margin:0;
+    padding-top:16px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .stamp-seal{
+    position:absolute;
+    right:22px; bottom:18px;
+    width:92px; height:92px;
+    border:2.5px solid var(--stamp);
+    border-radius:50%;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    transform:rotate(-11deg) scale(0.85);
+    mix-blend-mode:multiply;
+  }
+  .stamp-seal::before{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--stamp);
+    border-radius:50%;
+  }
+
+  footer{
+    margin-top:48px;
+    padding-top:18px;
+    border-top:1px solid var(--hairline);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  @media (max-width:600px){
+    .wrap{ padding:36px 16px 70px; }
+    header{ flex-direction:column; gap:14px; }
+    .case-no{ text-align:left; }
+    .wordmark{ font-size:1.7rem; }
+    .stamp-seal{ position:static; margin-top:18px; transform:rotate(-11deg) scale(0.85); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <p class="wordmark"><a href="/">MYSTOICA</a></p>
+      <p class="tagline">Sext — a reading, three times daily</p>
+    </div>
+    <div class="case-no">
+      <div>Case No. <strong>2026.0719-S</strong></div>
+      <div>Sourced around 13:00</div>
+      <div>Mainstream press excluded</div>
+    </div>
+  </header>
+
+  <p class="intro">Three containers failed within the same six-hour window, and none of them were speaking to one another, which is exactly how the record prefers it.</p>
+
+  <div class="exhibits">
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit A — Filed</div>
+      <div class="exhibit-loc">Owensboro, Kentucky</div>
+      <p class="exhibit-fact">Braden S. Sowders, 36, of the 1400 block of West Ninth Street, was charged Saturday with robbery, first degree; assault, fourth degree dating violence; and fleeing or evading police, second degree, on foot.</p>
+      <div class="exhibit-source">
+        <span>Messenger-Inquirer, Police Reports for July 19, 2026</span>
+        <a href="https://www.messenger-inquirer.com/records/courtpolice/police-reports-for-july-19-2026/article_75c15465-9403-541a-8557-3f294107436a.html" target="_blank" rel="noopener">www.messenger-inquirer.com ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 -4 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit B — Filed</div>
+      <div class="exhibit-loc">Washington Township, Pennsylvania</div>
+      <p class="exhibit-fact">The Eastern Berks Fire Department's call log recorded, as entry 312, units 97 and 505 dispatched on July 19 for an ALS Medical on Old Route 100 in Washington Township, Berks County.</p>
+      <div class="exhibit-source">
+        <span>Eastern Berks Fire Department Call Log</span>
+        <a href="https://easternberksfire.com/call-log/" target="_blank" rel="noopener">easternberksfire.com ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 20 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit C — Filed</div>
+      <div class="exhibit-loc">Shenzhen, China / Sold via Amazon.com</div>
+      <p class="exhibit-fact">The CPSC recalled Liizousuda paint thinner bottles sold on Amazon by Shenzhen Gudebo Technology from March 2025 through February 2026 for about $10, after finding the bottles lack child-resistant closures required under the Poison Prevention Packaging Act.</p>
+      <div class="exhibit-source">
+        <span>U.S. Consumer Product Safety Commission</span>
+        <a href="https://www.cpsc.gov/Recalls/2026/Liizousuda-Paint-Thinner-Bottles-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Child-Poisoning-Violate-Mandatory-Standard-for-Child-Resistant-Packaging-Sold-on-Amazon-com-by-Shenzhen-Gudebo-Technology" target="_blank" rel="noopener">www.cpsc.gov ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="symbols">
+    <span class="verdict-label">Symbolic Notes</span>
+    <dl class="symbol-list">
+      <div class="symbol-item">
+        <dt>A — The Runner</dt>
+        <dd>A man charged with taking something by force, then fleeing the scene on his own two feet, is the body refusing to be held by the sentence written about it. Flight, here, is not escape but proof of the charge.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>B — The Sustained</dt>
+        <dd>An ALS call on an old road numbered for what it once carried is the quiet intervention that keeps a body inside its hours a little longer. It is custody of a gentler kind, life held open at the exact place named for passage.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>C — The Unsealed</dt>
+        <dd>A bottle built without a child-resistant closure is a vessel that cannot keep its danger where it belongs. It waits on a shelf, honest about its contents but incapable of holding them back.</dd>
+      </div>
+    </dl>
+    <p class="symbol-synthesis">A body that will not be held, a body that must be held open, and a container that cannot hold at all — three failures of containment recorded on the same Sunday, each one a different grammar for the same verb: to keep.</p>
+  </div>
+
+  <div class="numerology">
+    <span class="verdict-label">Numerology</span>
+    <table class="num-table">
+      <tbody>
+        <tr><td>Sowders' booking age, 36</td><td class="num-reduce">→ 9</td></tr>
+        <tr><td>The address digit in the 1400 block of West Ninth Street</td><td class="num-reduce">→ 9</td></tr>
+        <tr><td>Eastern Berks Fire Department's incident tally, entry No. 312</td><td class="num-reduce">→ 6</td></tr>
+        <tr><td>The paint thinner bottle's retail price, $10</td><td class="num-reduce">→ 1</td></tr>
+        <tr><td>Old Route 100, the ALS call site</td><td class="num-reduce">→ 1</td></tr>
+      </tbody>
+    </table>
+    <p class="num-callout">Nine surfaces twice — once in the runner's age, once in the street he ran from — and one surfaces twice more, in the price of the poison and the number of the road.</p>
+    <p class="num-synthesis">Nine is the number that completes before it turns over into something new; here it marks the runner twice, as if the record itself were insisting he was already at his limit. The doubled one, meanwhile, is the smallest unit repeating — a road, a price — suggesting that what cannot be contained keeps returning to zero and starting again.</p>
+  </div>
+
+  <div class="theory">
+    <span class="verdict-label">Working Theory — The Adjacency Clause</span>
+    <p class="theory-text">The Adjacency Clause holds that no incident is filed in isolation; every record sits within reach of another record filed in the same window, and reach is a form of custody. Under this reading, the runner on West Ninth Street, the medic unit idling on Old Route 100, and the unsealed bottle waiting on a shelf somewhere between Shenzhen and a customer's door are not separate files but adjacent clauses in a single sentence about what a container is asked to do on a Sunday afternoon, and what happens when it refuses.</p>
+  </div>
+
+  <div class="cascade">
+    <span class="verdict-label">The Cascade</span>
+    <p class="cascade-intro">The custody trace runs from the body that breaks free to the body that is kept from breaking, and ends at the object built to break its promise from the start.</p>
+
+    <div class="cascade-chain">
+      <div class="cascade-step">
+        <div class="cascade-node">1</div>
+        <p><span class="cascade-loc">Owensboro, Kentucky</span> — A charge is filed against a body already in motion; the fleeing is logged as evidence, not absence.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">2</div>
+        <p>The file leaves the hand of the officer and enters the record, where it becomes a fixed object among moving ones.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">3</div>
+        <p><span class="cascade-loc">Washington Township, Pennsylvania</span> — Thirty-one miles and one state line away, a medic unit is held on the same afternoon at the same task the police report performs: keeping something inside its boundary.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">4</div>
+        <p>The boundary, once drawn, migrates outward — from a road to a bottle, from a body's custody to a product's.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">5</div>
+        <p><span class="cascade-loc">Shenzhen, China</span> — A container manufactured months earlier for a market it has never seen fails the one test that defines a container: it cannot keep what it holds from getting out.</p>
+      </div>
+    </div>
+
+    <p class="cascade-outro">Every clause in the file is adjacent to every other clause; the seal always breaks somewhere first.</p>
+    <div class="stamp-seal">so<br>held</div>
+  </div>
+
+  <footer>
+    <span>Sources cited, connections invented.</span>
+    <span>Next: Vespers</span>
+  </footer>
+
+</div>
+</body>
+</html>
