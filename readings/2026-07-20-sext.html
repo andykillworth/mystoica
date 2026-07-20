@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystoica — Sext Reading, Monday, July 20, 2026</title>
+<link rel="canonical" href="https://mystoica.com/readings/2026-07-20-sext.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #E9E2CE;
+    --paper-dark: #DED4B9;
+    --ink: #2A2620;
+    --ink-soft: #58503f;
+    --stamp: #9C3B26;
+    --carbon: #3D4A63;
+    --hairline: #b7ab8c;
+    --thread: #8a3226;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Spectral', Georgia, serif;
+    font-size:18px;
+  }
+
+  body{
+    background-image:
+      radial-gradient(ellipse at top left, rgba(255,255,255,0.25), transparent 45%),
+      radial-gradient(ellipse at bottom right, rgba(0,0,0,0.05), transparent 50%);
+  }
+
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 24px 100px;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:1px solid var(--hairline);
+    padding-bottom:22px;
+    margin-bottom:40px;
+  }
+
+  .wordmark{ font-size:2.1rem; letter-spacing:0.04em; font-weight:600; margin:0; }
+  .wordmark a{ color:inherit; text-decoration:none; }
+
+  .tagline{
+    margin:4px 0 0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .case-no{
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    line-height:1.6;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    padding-top:6px;
+  }
+  .case-no strong{ color:var(--ink); }
+
+  .intro{
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin:0 0 34px;
+  }
+
+  .exhibits{ display:flex; flex-direction:column; gap:18px; margin-bottom:44px; }
+
+  .exhibit{
+    position:relative;
+    background:var(--paper-dark);
+    border:1px solid var(--hairline);
+    padding:20px 22px 18px;
+  }
+
+  .exhibit-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .exhibit-tag::before{
+    content:"";
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--stamp);
+    display:inline-block;
+  }
+
+  .exhibit-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+
+  .exhibit-fact{ font-size:1.08rem; line-height:1.55; margin:8px 0 12px; }
+
+  .exhibit-source{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--hairline);
+    padding-top:8px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .exhibit-source a{ color:var(--carbon); text-decoration:none; border-bottom:1px solid var(--carbon); }
+  .exhibit-source a:hover{ opacity:0.7; }
+
+  .thread-row{ display:flex; justify-content:center; margin: -6px 0; }
+  .thread-row svg{ display:block; }
+
+  .symbols{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:linear-gradient(180deg, rgba(255,255,255,0.3), transparent 40%);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .symbols .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .symbol-list{ margin:0 0 16px; }
+  .symbol-item{ margin-bottom:14px; }
+  .symbol-item:last-child{ margin-bottom:0; }
+
+  .symbol-item dt{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    margin-bottom:5px;
+  }
+
+  .symbol-item dd{ margin:0; font-size:0.96rem; line-height:1.6; color:var(--ink); }
+  .symbol-item dd em{ font-style:italic; color:var(--ink-soft); }
+
+  .symbol-synthesis{
+    font-size:1.02rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:14px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .numerology{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:var(--paper-dark);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .numerology .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .num-table{ width:100%; border-collapse:collapse; margin-bottom:14px; font-family:'IBM Plex Mono', monospace; font-size:0.82rem; }
+  .num-table td{ padding:6px 0; border-bottom:1px dashed var(--hairline); color:var(--ink); }
+  .num-table tr:last-child td{ border-bottom:none; }
+  .num-reduce{ text-align:right; color:var(--stamp); white-space:nowrap; width:60px; }
+
+  .num-callout{ font-size:0.98rem; line-height:1.6; margin:0 0 12px; color:var(--ink); }
+  .num-callout strong{ font-family:'IBM Plex Mono', monospace; color:var(--stamp); font-size:1.05rem; }
+
+  .num-synthesis{
+    font-size:0.96rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:12px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .theory{
+    position:relative;
+    border-left:3px solid var(--carbon);
+    background:var(--paper-dark);
+    padding:18px 22px 20px;
+    margin-bottom:26px;
+  }
+  .theory .verdict-label{ position:static; display:inline-block; background:none; padding:0; color:var(--carbon); margin-bottom:8px; }
+  .theory-text{ font-size:0.96rem; line-height:1.6; color:var(--ink); margin:0; }
+
+  .cascade{
+    position:relative;
+    border:1px solid var(--ink);
+    padding:36px 30px 30px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px);
+  }
+
+  .verdict-label{
+    position:absolute;
+    top:-11px;
+    left:26px;
+    background:var(--paper);
+    padding:0 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .cascade-intro{ font-size:1.02rem; line-height:1.6; font-style:italic; color:var(--ink-soft); margin:6px 0 26px; }
+  .cascade-intro em{ color:var(--ink); font-style:italic; }
+
+  .cascade-chain{ position:relative; padding-left:30px; margin-bottom:26px; }
+  .cascade-chain::before{
+    content:"";
+    position:absolute;
+    left:9px; top:6px; bottom:6px; width:1px;
+    background:repeating-linear-gradient(to bottom, var(--thread) 0 4px, transparent 4px 8px);
+    opacity:0.55;
+  }
+
+  .cascade-step{ position:relative; margin-bottom:20px; }
+  .cascade-step:last-child{ margin-bottom:0; }
+
+  .cascade-node{
+    position:absolute;
+    left:-30px; top:1px;
+    width:19px; height:19px;
+    border-radius:50%;
+    background:var(--paper);
+    border:1px solid var(--thread);
+    color:var(--thread);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .cascade-step p{ font-size:0.98rem; line-height:1.6; margin:0; }
+
+  .cascade-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    color:var(--carbon);
+    text-transform:uppercase;
+  }
+
+  .cascade-outro{
+    font-size:1.2rem;
+    line-height:1.6;
+    font-style:italic;
+    font-weight:500;
+    margin:0;
+    padding-top:16px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .stamp-seal{
+    position:absolute;
+    right:22px; bottom:18px;
+    width:92px; height:92px;
+    border:2.5px solid var(--stamp);
+    border-radius:50%;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    transform:rotate(-11deg) scale(0.85);
+    mix-blend-mode:multiply;
+  }
+  .stamp-seal::before{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--stamp);
+    border-radius:50%;
+  }
+
+  footer{
+    margin-top:48px;
+    padding-top:18px;
+    border-top:1px solid var(--hairline);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  @media (max-width:600px){
+    .wrap{ padding:36px 16px 70px; }
+    header{ flex-direction:column; gap:14px; }
+    .case-no{ text-align:left; }
+    .wordmark{ font-size:1.7rem; }
+    .stamp-seal{ position:static; margin-top:18px; transform:rotate(-11deg) scale(0.85); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <p class="wordmark"><a href="/">MYSTOICA</a></p>
+      <p class="tagline">Sext — a reading, three times daily</p>
+    </div>
+    <div class="case-no">
+      <div>Case No. <strong>2026.0720-S</strong></div>
+      <div>Sourced around 13:00</div>
+      <div>Mainstream press excluded</div>
+    </div>
+  </header>
+
+  <p class="intro">Three dispatches, filed an ocean of jurisdiction apart, each mark the exact spot where a boundary that was supposed to hold quietly gave way.</p>
+
+  <div class="exhibits">
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit A — Filed</div>
+      <div class="exhibit-loc">Owensboro, Kentucky</div>
+      <p class="exhibit-fact">Jeffery A. Gross, 60, of the 1100 block Pennbrooke Avenue, was charged Saturday with theft by unlawful taking or disposition (shoplifting), value between $1,000 and $10,000.</p>
+      <div class="exhibit-source">
+        <span>Messenger-Inquirer, Police Reports for July 20, 2026</span>
+        <a href="https://www.messenger-inquirer.com/records/courtpolice/police-reports-for-july-20-2026/article_d1150780-3b58-5165-8d45-1c755d79ee25.html" target="_blank" rel="noopener">www.messenger-inquirer.com ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 -4 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit B — Filed</div>
+      <div class="exhibit-loc">New York, New York</div>
+      <p class="exhibit-fact">Madewell issued a voluntary recall notice dated July 16, 2026, for two Holiday 2024 sweater styles found not to fully meet federal flammability standards for clothing textiles, undertaken in cooperation with the CPSC.</p>
+      <div class="exhibit-source">
+        <span>Madewell Product Recall Notice</span>
+        <a href="https://www.madewell.com/c/product-recall/" target="_blank" rel="noopener">www.madewell.com ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 20 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit C — Filed</div>
+      <div class="exhibit-loc">Benton County, Oregon</div>
+      <p class="exhibit-fact">On July 2, 2026, Benton County deputies responded to the 37100 block of Kings Valley Highway after a vehicle struck a cow; the vehicle required towing.</p>
+      <div class="exhibit-source">
+        <span>Benton County Sheriff's Office Daily Activity Log</span>
+        <a href="https://sheriff.bentoncountyor.gov/daily-activity-log/" target="_blank" rel="noopener">sheriff.bentoncountyor.gov ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="symbols">
+    <span class="verdict-label">Symbolic Notes</span>
+    <dl class="symbol-list">
+      <div class="symbol-item">
+        <dt>A — The Threshold Value</dt>
+        <dd>Gross's charge sits precisely on the numeral fence between petty and felony theft, a dollar figure engineered by statute to be a no-man's-land. He did not steal a small thing or a large one; he stepped into the bracket itself.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>B — The Second Skin</dt>
+        <dd>A sweater is a promise of containment, warmth held against the body. When the promise fails at the level of fabric, the garment becomes the very hazard it was sewn to prevent — protection reversing its polarity.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>C — The Broken Fence-Line</dt>
+        <dd>A cow on a highway is a boundary already dissolved before the vehicle ever arrives — enclosure failing first, collision only completing what the fence had already confessed.</dd>
+      </div>
+    </dl>
+    <p class="symbol-synthesis">Value, warmth, and enclosure are three different containers, and on this dispatch day all three ruptured at once — proof that thresholds do not fail in isolation, they fail in sympathy.</p>
+  </div>
+
+  <div class="numerology">
+    <span class="verdict-label">Numerology</span>
+    <table class="num-table">
+      <tbody>
+        <tr><td>Gross's age</td><td class="num-reduce">→ 60 → 6</td></tr>
+        <tr><td>Pennbrooke Avenue block number (1100)</td><td class="num-reduce">→ 2</td></tr>
+        <tr><td>Sweater styles recalled</td><td class="num-reduce">→ 2</td></tr>
+        <tr><td>Kings Valley Highway block number (37100)</td><td class="num-reduce">→ 2</td></tr>
+        <tr><td>Day of the Madewell recall (the 16th)</td><td class="num-reduce">→ 7</td></tr>
+      </tbody>
+    </table>
+    <p class="num-callout">The digit 2 surfaces three separate times, independently, across three unrelated filings — a duplication the record was never asked to produce but produced anyway.</p>
+    <p class="num-synthesis">Threeness of the exhibits collapses into a repeated twoness underneath — the pattern doubling back on itself, as if every threshold that breaks does so in pairs, one visible and one hidden in the paperwork.</p>
+  </div>
+
+  <div class="theory">
+    <span class="verdict-label">Working Theory — The Adjacency Clause</span>
+    <p class="theory-text">The Adjacency Clause holds that no dispatch is ever filed alone. Every report entered into a public record on a given day is quietly bonded to whatever else crossed a desk that same week — not by cause, but by custody. The three filings gathered here were never meant to touch: a shoplifting charge in Daviess County, a flammability recall out of a floor in Lower Manhattan, a cow struck on a two-lane highway in the Willamette foothills. But custody does not require intention. It requires only that a threshold be crossed, logged, and time-stamped near enough to another threshold crossing that the two begin, in the record if nowhere else, to answer to each other.
+</p>
+  </div>
+
+  <div class="cascade">
+    <span class="verdict-label">The Cascade</span>
+    <p class="cascade-intro">Trace the custody chain forward and the three ruptures resolve into a single sequence of failed containment.</p>
+
+    <div class="cascade-chain">
+      <div class="cascade-step">
+        <div class="cascade-node">1</div>
+        <p><span class="cascade-loc">Owensboro, Kentucky</span> — Saturday: Jeffery Gross crosses the statutory threshold at the 1100 block of Pennbrooke Avenue, and the theft is logged inside the bracket the law built for exactly this ambiguity.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">2</div>
+        <p><span class="cascade-loc">Benton County, Oregon</span> — Eighteen days earlier, on July 2, a fence-line already failing lets a cow onto Kings Valley Highway — the first and quietest of the three enclosures to give way, filed and nearly forgotten by the time Gross is booked.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">3</div>
+        <p><span class="cascade-loc">New York, New York</span> — On July 16, in a compliance office above Lower Manhattan, Madewell's own paperwork admits what the fabric already knew — two sweater lines fail the standard meant to keep warmth from becoming fire.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">4</div>
+        <p>By July 20 the three filings sit in the same eighteen-day custody window, never cross-referenced, never meant to be read together, and yet each one a record of a boundary that was supposed to hold and did not.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">5</div>
+        <p>The Adjacency Clause does not explain why; it only notes that thresholds, once they start failing nearby in time, rarely fail alone.</p>
+      </div>
+    </div>
+
+    <p class="cascade-outro">The record does not ask what connects a shoplifter, a sweater, and a cow. It only asks what crossed the line, and when — and today, three things did.</p>
+    <div class="stamp-seal">line<br>crossed</div>
+  </div>
+
+  <footer>
+    <span>Sources cited, connections invented.</span>
+    <span>Next: Vespers</span>
+  </footer>
+
+</div>
+</body>
+</html>
