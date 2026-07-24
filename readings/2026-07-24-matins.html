@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystoica — Matins Reading, Friday, July 24, 2026</title>
+<link rel="canonical" href="https://mystoica.com/readings/2026-07-24-matins.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #E9E2CE;
+    --paper-dark: #DED4B9;
+    --ink: #2A2620;
+    --ink-soft: #58503f;
+    --stamp: #9C3B26;
+    --carbon: #3D4A63;
+    --hairline: #b7ab8c;
+    --thread: #8a3226;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Spectral', Georgia, serif;
+    font-size:18px;
+  }
+
+  body{
+    background-image:
+      radial-gradient(ellipse at top left, rgba(255,255,255,0.25), transparent 45%),
+      radial-gradient(ellipse at bottom right, rgba(0,0,0,0.05), transparent 50%);
+  }
+
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 24px 100px;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:1px solid var(--hairline);
+    padding-bottom:22px;
+    margin-bottom:40px;
+  }
+
+  .wordmark{ font-size:2.1rem; letter-spacing:0.04em; font-weight:600; margin:0; }
+  .wordmark a{ color:inherit; text-decoration:none; }
+
+  .tagline{
+    margin:4px 0 0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .case-no{
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    line-height:1.6;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    padding-top:6px;
+  }
+  .case-no strong{ color:var(--ink); }
+
+  .intro{
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin:0 0 34px;
+  }
+
+  .exhibits{ display:flex; flex-direction:column; gap:18px; margin-bottom:44px; }
+
+  .exhibit{
+    position:relative;
+    background:var(--paper-dark);
+    border:1px solid var(--hairline);
+    padding:20px 22px 18px;
+  }
+
+  .exhibit-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .exhibit-tag::before{
+    content:"";
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--stamp);
+    display:inline-block;
+  }
+
+  .exhibit-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+
+  .exhibit-fact{ font-size:1.08rem; line-height:1.55; margin:8px 0 12px; }
+
+  .exhibit-source{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--hairline);
+    padding-top:8px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .exhibit-source a{ color:var(--carbon); text-decoration:none; border-bottom:1px solid var(--carbon); }
+  .exhibit-source a:hover{ opacity:0.7; }
+
+  .thread-row{ display:flex; justify-content:center; margin: -6px 0; }
+  .thread-row svg{ display:block; }
+
+  .symbols{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:linear-gradient(180deg, rgba(255,255,255,0.3), transparent 40%);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .symbols .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .symbol-list{ margin:0 0 16px; }
+  .symbol-item{ margin-bottom:14px; }
+  .symbol-item:last-child{ margin-bottom:0; }
+
+  .symbol-item dt{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    margin-bottom:5px;
+  }
+
+  .symbol-item dd{ margin:0; font-size:0.96rem; line-height:1.6; color:var(--ink); }
+  .symbol-item dd em{ font-style:italic; color:var(--ink-soft); }
+
+  .symbol-synthesis{
+    font-size:1.02rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:14px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .numerology{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:var(--paper-dark);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .numerology .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .num-table{ width:100%; border-collapse:collapse; margin-bottom:14px; font-family:'IBM Plex Mono', monospace; font-size:0.82rem; }
+  .num-table td{ padding:6px 0; border-bottom:1px dashed var(--hairline); color:var(--ink); }
+  .num-table tr:last-child td{ border-bottom:none; }
+  .num-reduce{ text-align:right; color:var(--stamp); white-space:nowrap; width:60px; }
+
+  .num-callout{ font-size:0.98rem; line-height:1.6; margin:0 0 12px; color:var(--ink); }
+  .num-callout strong{ font-family:'IBM Plex Mono', monospace; color:var(--stamp); font-size:1.05rem; }
+
+  .num-synthesis{
+    font-size:0.96rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:12px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .theory{
+    position:relative;
+    border-left:3px solid var(--carbon);
+    background:var(--paper-dark);
+    padding:18px 22px 20px;
+    margin-bottom:26px;
+  }
+  .theory .verdict-label{ position:static; display:inline-block; background:none; padding:0; color:var(--carbon); margin-bottom:8px; }
+  .theory-text{ font-size:0.96rem; line-height:1.6; color:var(--ink); margin:0; }
+
+  .cascade{
+    position:relative;
+    border:1px solid var(--ink);
+    padding:36px 30px 30px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px);
+  }
+
+  .verdict-label{
+    position:absolute;
+    top:-11px;
+    left:26px;
+    background:var(--paper);
+    padding:0 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .cascade-intro{ font-size:1.02rem; line-height:1.6; font-style:italic; color:var(--ink-soft); margin:6px 0 26px; }
+  .cascade-intro em{ color:var(--ink); font-style:italic; }
+
+  .cascade-chain{ position:relative; padding-left:30px; margin-bottom:26px; }
+  .cascade-chain::before{
+    content:"";
+    position:absolute;
+    left:9px; top:6px; bottom:6px; width:1px;
+    background:repeating-linear-gradient(to bottom, var(--thread) 0 4px, transparent 4px 8px);
+    opacity:0.55;
+  }
+
+  .cascade-step{ position:relative; margin-bottom:20px; }
+  .cascade-step:last-child{ margin-bottom:0; }
+
+  .cascade-node{
+    position:absolute;
+    left:-30px; top:1px;
+    width:19px; height:19px;
+    border-radius:50%;
+    background:var(--paper);
+    border:1px solid var(--thread);
+    color:var(--thread);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .cascade-step p{ font-size:0.98rem; line-height:1.6; margin:0; }
+
+  .cascade-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    color:var(--carbon);
+    text-transform:uppercase;
+  }
+
+  .cascade-outro{
+    font-size:1.2rem;
+    line-height:1.6;
+    font-style:italic;
+    font-weight:500;
+    margin:0;
+    padding-top:16px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .stamp-seal{
+    position:absolute;
+    right:22px; bottom:18px;
+    width:92px; height:92px;
+    border:2.5px solid var(--stamp);
+    border-radius:50%;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    transform:rotate(-11deg) scale(0.85);
+    mix-blend-mode:multiply;
+  }
+  .stamp-seal::before{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--stamp);
+    border-radius:50%;
+  }
+
+  footer{
+    margin-top:48px;
+    padding-top:18px;
+    border-top:1px solid var(--hairline);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  @media (max-width:600px){
+    .wrap{ padding:36px 16px 70px; }
+    header{ flex-direction:column; gap:14px; }
+    .case-no{ text-align:left; }
+    .wordmark{ font-size:1.7rem; }
+    .stamp-seal{ position:static; margin-top:18px; transform:rotate(-11deg) scale(0.85); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <p class="wordmark"><a href="/">MYSTOICA</a></p>
+      <p class="tagline">Matins — a reading, three times daily</p>
+    </div>
+    <div class="case-no">
+      <div>Case No. <strong>2026.0724-M</strong></div>
+      <div>Sourced around 07:00</div>
+      <div>Mainstream press excluded</div>
+    </div>
+  </header>
+
+  <p class="intro">Before the coffee finishes, three unrelated records surface from the overnight feed, and none of them know about the others.</p>
+
+  <div class="exhibits">
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit A — Filed</div>
+      <div class="exhibit-loc">Westerly, Rhode Island</div>
+      <p class="exhibit-fact">The Westerly Sun's Friday police log records that Jodie L. Kluver, 58, of 16 Cedarcrest Drive, was arrested on July 22 and charged with domestic violence, simple assault and battery, first offense, domestic violence, vandalism, first offense, and domestic violence, disorderly conduct, first offense.</p>
+      <div class="exhibit-source">
+        <span>The Westerly Sun — Police Logs</span>
+        <a href="https://www.thewesterlysun.com/news/police-logs-friday-july-24-2026/article_738e1866-6fcc-4ef6-90d5-1966a2e4a0ba.html" target="_blank" rel="noopener">www.thewesterlysun.com ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 -4 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit B — Filed</div>
+      <div class="exhibit-loc">Saint-Hyacinthe, Quebec / Oklahoma</div>
+      <p class="exhibit-fact">FSIS and Food Safety News reported that BCI Foods, Inc., the importer of record located in Saint-Hyacinthe, Quebec, Canada, is recalling 4,300 pounds of a chicken noodle soup product that was imported from Canada without the benefit of import reinspection into the United States, an item further distributed to food banks and food pantry locations in Oklahoma.</p>
+      <div class="exhibit-source">
+        <span>Food Safety News / FSIS Recall Notice</span>
+        <a href="https://www.foodsafetynews.com/2026/07/chicken-noodle-soup-recalled-because-of-lack-of-import-reinspection/" target="_blank" rel="noopener">www.foodsafetynews.com ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 20 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit C — Filed</div>
+      <div class="exhibit-loc">Madras / Jefferson & Wasco Counties, Oregon</div>
+      <p class="exhibit-fact">The Central Oregon Interagency Dispatch Center's 5 p.m. update for July 23, 2026 reported that the Central Oregon Type 3 team had taken command of the Ten Mile Fire burning 11 miles northeast of Madras, north of Trout Creek, as the Jefferson and Wasco County Sheriff's Offices issued Level 1, 2 and 3 evacuations amid 2,088 lightning strikes recorded over the preceding 72 hours.</p>
+      <div class="exhibit-source">
+        <span>Central Oregon Fire Information — Interagency Dispatch Update</span>
+        <a href="https://centraloregonfire.org/2026/07/23/central-oregon-interagency-dispatch-update-july-23-2026-500-p-m/" target="_blank" rel="noopener">centraloregonfire.org ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="symbols">
+    <span class="verdict-label">Symbolic Notes</span>
+    <dl class="symbol-list">
+      <div class="symbol-item">
+        <dt>A — The Triple Charge</dt>
+        <dd>One body, one night, three counts stamped 'first offense' in a row — a threshold not crossed but detonated, the domestic interior turned inside out three times before the door even shuts.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>B — The Unchecked Can</dt>
+        <dd>A soup that crossed a border without ever being looked at, then landed where looking-after is already scarce — nourishment arriving unverified into the exact rooms built for those who cannot verify anything for themselves.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>C — The Counted Sky</dt>
+        <dd>Lightning does not file paperwork, so the sky's 2,088 strikes stand in for every uninspected origin — and the fire born of them is put under a command team only after it has already been counted in threes: Level 1, Level 2, Level 3.</dd>
+      </div>
+    </dl>
+    <p class="symbol-synthesis">Each exhibit is a boundary that failed exactly three times over — a threshold, a border-crossing, an evacuation ladder — as if the record itself insists that nothing is truly filed until it has been broken in triplicate.</p>
+  </div>
+
+  <div class="numerology">
+    <span class="verdict-label">Numerology</span>
+    <table class="num-table">
+      <tbody>
+        <tr><td>House number, 16 Cedarcrest Drive</td><td class="num-reduce">→ 7</td></tr>
+        <tr><td>Pounds of soup recalled, 4,300</td><td class="num-reduce">→ 7</td></tr>
+        <tr><td>Lightning strikes over 72 hours, 2,088</td><td class="num-reduce">→ 9</td></tr>
+        <tr><td>Miles from Madras to the Ten Mile Fire, 11</td><td class="num-reduce">→ 2</td></tr>
+        <tr><td>Age of the arrested party, 58</td><td class="num-reduce">→ 4</td></tr>
+      </tbody>
+    </table>
+    <p class="num-callout">The digit 7 surfaces twice — once in a residential address, once in a weight of recalled soup — a repetition too quiet to be coincidence and too exact to be anything else.</p>
+    <p class="num-synthesis">Seven is the number that keeps returning to close a file that was never properly opened — the address that held the assault, the tonnage that slipped the border — as if the ledger insists on balancing itself in sevens even when no one asked it to.</p>
+  </div>
+
+  <div class="theory">
+    <span class="verdict-label">Working Theory — The Adjacency Clause</span>
+    <p class="theory-text">Under what we have come to call the Adjacency Clause, no dispatch is ever truly isolated from the ones filed beside it in the same rotation; proximity in the record is its own form of custody, and an exhibit logged within hours of another inherits a portion of its charge whether or not the two ever occupy the same coordinates. A domestic charge tripled at a Rhode Island address, a soup shipment that skipped its checkpoint, and a sky that struck the ground 2,088 times before anyone thought to count it — these are not separate events under the Clause. They are three faces of a single uninspected threshold, recorded in three jurisdictions because no single jurisdiction could hold the whole of it.</p>
+  </div>
+
+  <div class="cascade">
+    <span class="verdict-label">The Cascade</span>
+    <p class="cascade-intro">Trace the custody chain forward, exhibit to exhibit, as the file passes hands it was never meant to pass through.</p>
+
+    <div class="cascade-chain">
+      <div class="cascade-step">
+        <div class="cascade-node">1</div>
+        <p><span class="cascade-loc">Westerly, Rhode Island</span> — At 16 Cedarcrest Drive, a single arrest is stamped 'first offense' three separate times in one report, sealing a threshold that was crossed and re-crossed before the ink dried.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">2</div>
+        <p><span class="cascade-loc">Saint-Hyacinthe, Quebec</span> — A can of soup leaves its plant without ever passing FSIS reinspection — a border crossed with no one standing at the checkpoint, the first uncounted threshold of the chain.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">3</div>
+        <p><span class="cascade-loc">Oklahoma</span> — The uninspected can arrives at food banks and pantries, nourishment delivered to those least equipped to inspect it themselves — the second uncounted threshold, now compounded by need.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">4</div>
+        <p><span class="cascade-loc">Madras, Oregon</span> — 2,088 lightning strikes fall on Central Oregon in 72 hours, an uncounted ignition until the Ten Mile Fire finally earns a Type 3 command team and a number of its own.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">5</div>
+        <p><span class="cascade-loc">Jefferson & Wasco Counties, Oregon</span> — The Sheriff's Offices issue evacuations in Levels 1, 2 and 3 — the same triplication that opened the chain in Rhode Island, now written across an entire county instead of a single address.</p>
+      </div>
+    </div>
+
+    <p class="cascade-outro">The file closes where it opened — not in resolution, but in the same three-count rhythm it started with.</p>
+    <div class="stamp-seal">so<br>it follows</div>
+  </div>
+
+  <footer>
+    <span>Sources cited, connections invented.</span>
+    <span>Next: Sext</span>
+  </footer>
+
+</div>
+</body>
+</html>
