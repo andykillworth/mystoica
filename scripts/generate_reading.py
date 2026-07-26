@@ -4,8 +4,9 @@ Mystoica pipeline script.
 
 Called three times a day (matins / sext / vespers) by an external scheduler.
 1. Scans previous readings to build a list of already-used sources.
-2. Calls Claude with web search enabled, asking for a structured JSON reading
-   built from real, obscure public-record sources NOT already used.
+2. Calls Claude with web search enabled (capped at 5 searches per run, to
+   control cost), asking for a structured JSON reading built from real,
+   obscure public-record sources NOT already used.
 3. Fills that content into reading_template.html.
 4. Writes the result to readings/YYYY-MM-DD-<slot>.html
 5. Regenerates index.html (today's three dispatches) and archive.html (full list).
@@ -36,11 +37,14 @@ department dispatch logs, court dockets, USPTO trademark filings. NEVER use
 mainstream press (no AP, Reuters, NYT, CNN, BBC, etc). The more obscure and
 hyperlocal the source, the better.
 
+You have a LIMITED budget of web searches (5 max) for this task. Use them
+efficiently — search with specific, targeted queries rather than broad ones,
+and stop as soon as you have three good, distinct, real facts. Do not use
+every available search if you don't need to.
+
 Find exactly THREE real, unrelated facts from three different obscure sources.
 CRITICAL: you will be given a list of sources/facts already used in previous
-readings. You must NOT reuse any of them, and should actively search for
-different obscure sources each time, even if it takes more searches to find
-fresh ones. Repetition is the single biggest failure mode for this project.
+readings. You must NOT reuse any of them.
 
 Then invent a symbolic reading, a numerology exercise, a "custody chain" theory,
 and a 5-step cascade narrative connecting them — written with total sincerity,
@@ -136,10 +140,10 @@ def call_claude(slot: str, date_str: str, used_sources: list) -> dict:
     }
     payload = {
         "model": MODEL,
-        "max_tokens": 8000,
+        "max_tokens": 6000,
         "system": SYSTEM_PROMPT,
         "messages": [{"role": "user", "content": build_user_prompt(slot, date_str, used_sources)}],
-        "tools": [{"type": "web_search_20250305", "name": "web_search"}],
+        "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
     }
     resp = requests.post(API_URL, headers=headers, json=payload, timeout=180)
     resp.raise_for_status()
@@ -160,9 +164,6 @@ def call_claude(slot: str, date_str: str, used_sources: list) -> dict:
 
     json_str = full_text[start:end + 1]
     try:
-        # strict=False allows literal control characters (like stray newlines)
-        # inside string values, which the model occasionally emits despite
-        # instructions — this is the fix for the "Invalid control character" error.
         return json.loads(json_str, strict=False)
     except json.JSONDecodeError:
         print("---- RAW MODEL OUTPUT (failed to parse as JSON) ----")
