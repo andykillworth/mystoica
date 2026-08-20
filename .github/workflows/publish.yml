@@ -2,16 +2,6 @@ name: Publish Mystoica Reading
 
 on:
   workflow_dispatch:
-    inputs:
-      slot:
-        description: 'Which slot to generate'
-        required: true
-        default: 'matins'
-        type: choice
-        options:
-          - matins
-          - sext
-          - vespers
 
 permissions:
   contents: write
@@ -31,32 +21,15 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Determine slot
-        id: slot
-        run: |
-          if [ -n "${{ github.event.inputs.slot }}" ]; then
-            echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
-          else
-            HOUR=$(date -u +%H)
-            if [ "$HOUR" -lt 10 ]; then
-              SLOT=matins
-            elif [ "$HOUR" -lt 16 ]; then
-              SLOT=sext
-            else
-              SLOT=vespers
-            fi
-            echo "slot=$SLOT" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Generate reading
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/generate_reading.py ${{ steps.slot.outputs.slot }}
+        run: python scripts/generate_reading.py
 
       - name: Commit and push
         run: |
           git config user.name "mystoica-bot"
           git config user.email "actions@github.com"
           git add readings/ index.html archive.html
-          git diff --cached --quiet && echo "No changes to commit" || git commit -m "Automated reading: ${{ steps.slot.outputs.slot }} $(date -u +%Y-%m-%d)"
+          git diff --cached --quiet && echo "No changes to commit" || git commit -m "Automated reading: $(date -u +%Y-%m-%d)"
           git push
