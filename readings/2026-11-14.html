@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystoica — Reading for Saturday, November 14, 2026</title>
+<link rel="canonical" href="https://mystoica.com/readings/2026-11-14.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #E9E2CE;
+    --paper-dark: #DED4B9;
+    --ink: #2A2620;
+    --ink-soft: #58503f;
+    --stamp: #9C3B26;
+    --carbon: #3D4A63;
+    --hairline: #b7ab8c;
+    --thread: #8a3226;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Spectral', Georgia, serif;
+    font-size:18px;
+  }
+
+  body{
+    background-image:
+      radial-gradient(ellipse at top left, rgba(255,255,255,0.25), transparent 45%),
+      radial-gradient(ellipse at bottom right, rgba(0,0,0,0.05), transparent 50%);
+  }
+
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 24px 100px;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:1px solid var(--hairline);
+    padding-bottom:22px;
+    margin-bottom:40px;
+  }
+
+  .wordmark{ font-size:2.1rem; letter-spacing:0.04em; font-weight:600; margin:0; }
+  .wordmark a{ color:inherit; text-decoration:none; }
+
+  .tagline{
+    margin:4px 0 0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .case-no{
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    line-height:1.6;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    padding-top:6px;
+  }
+  .case-no strong{ color:var(--ink); }
+
+  .intro{
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin:0 0 34px;
+  }
+
+  .exhibits{ display:flex; flex-direction:column; gap:18px; margin-bottom:44px; }
+
+  .exhibit{
+    position:relative;
+    background:var(--paper-dark);
+    border:1px solid var(--hairline);
+    padding:20px 22px 18px;
+  }
+
+  .exhibit-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .exhibit-tag::before{
+    content:"";
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--stamp);
+    display:inline-block;
+  }
+
+  .exhibit-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+
+  .exhibit-fact{ font-size:1.08rem; line-height:1.55; margin:8px 0 12px; }
+
+  .exhibit-source{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--hairline);
+    padding-top:8px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .exhibit-source a{ color:var(--carbon); text-decoration:none; border-bottom:1px solid var(--carbon); }
+  .exhibit-source a:hover{ opacity:0.7; }
+
+  .thread-row{ display:flex; justify-content:center; margin: -6px 0; }
+  .thread-row svg{ display:block; }
+
+  .symbols{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:linear-gradient(180deg, rgba(255,255,255,0.3), transparent 40%);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .symbols .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .symbol-list{ margin:0 0 16px; }
+  .symbol-item{ margin-bottom:14px; }
+  .symbol-item:last-child{ margin-bottom:0; }
+
+  .symbol-item dt{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    margin-bottom:5px;
+  }
+
+  .symbol-item dd{ margin:0; font-size:0.96rem; line-height:1.6; color:var(--ink); }
+  .symbol-item dd em{ font-style:italic; color:var(--ink-soft); }
+
+  .symbol-synthesis{
+    font-size:1.02rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:14px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .numerology{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:var(--paper-dark);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .numerology .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .num-table{ width:100%; border-collapse:collapse; margin-bottom:14px; font-family:'IBM Plex Mono', monospace; font-size:0.82rem; }
+  .num-table td{ padding:6px 0; border-bottom:1px dashed var(--hairline); color:var(--ink); }
+  .num-table tr:last-child td{ border-bottom:none; }
+  .num-reduce{ text-align:right; color:var(--stamp); white-space:nowrap; width:60px; }
+
+  .num-callout{ font-size:0.98rem; line-height:1.6; margin:0 0 12px; color:var(--ink); }
+  .num-callout strong{ font-family:'IBM Plex Mono', monospace; color:var(--stamp); font-size:1.05rem; }
+
+  .num-synthesis{
+    font-size:0.96rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:12px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .theory{
+    position:relative;
+    border-left:3px solid var(--carbon);
+    background:var(--paper-dark);
+    padding:18px 22px 20px;
+    margin-bottom:26px;
+  }
+  .theory .verdict-label{ position:static; display:inline-block; background:none; padding:0; color:var(--carbon); margin-bottom:8px; }
+  .theory-text{ font-size:0.96rem; line-height:1.6; color:var(--ink); margin:0; }
+
+  .cascade{
+    position:relative;
+    border:1px solid var(--ink);
+    padding:36px 30px 30px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px);
+  }
+
+  .verdict-label{
+    position:absolute;
+    top:-11px;
+    left:26px;
+    background:var(--paper);
+    padding:0 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .cascade-intro{ font-size:1.02rem; line-height:1.6; font-style:italic; color:var(--ink-soft); margin:6px 0 26px; }
+  .cascade-intro em{ color:var(--ink); font-style:italic; }
+
+  .cascade-chain{ position:relative; padding-left:30px; margin-bottom:26px; }
+  .cascade-chain::before{
+    content:"";
+    position:absolute;
+    left:9px; top:6px; bottom:6px; width:1px;
+    background:repeating-linear-gradient(to bottom, var(--thread) 0 4px, transparent 4px 8px);
+    opacity:0.55;
+  }
+
+  .cascade-step{ position:relative; margin-bottom:20px; }
+  .cascade-step:last-child{ margin-bottom:0; }
+
+  .cascade-node{
+    position:absolute;
+    left:-30px; top:1px;
+    width:19px; height:19px;
+    border-radius:50%;
+    background:var(--paper);
+    border:1px solid var(--thread);
+    color:var(--thread);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .cascade-step p{ font-size:0.98rem; line-height:1.6; margin:0; }
+
+  .cascade-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    color:var(--carbon);
+    text-transform:uppercase;
+  }
+
+  .cascade-outro{
+    font-size:1.2rem;
+    line-height:1.6;
+    font-style:italic;
+    font-weight:500;
+    margin:0;
+    padding-top:16px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .stamp-seal{
+    position:absolute;
+    right:22px; bottom:18px;
+    width:92px; height:92px;
+    border:2.5px solid var(--stamp);
+    border-radius:50%;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    transform:rotate(-11deg) scale(0.85);
+    mix-blend-mode:multiply;
+  }
+  .stamp-seal::before{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--stamp);
+    border-radius:50%;
+  }
+
+  footer{
+    margin-top:48px;
+    padding-top:18px;
+    border-top:1px solid var(--hairline);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  footer a{ color:var(--carbon); }
+
+  @media (max-width:600px){
+    .wrap{ padding:36px 16px 70px; }
+    header{ flex-direction:column; gap:14px; }
+    .case-no{ text-align:left; }
+    .wordmark{ font-size:1.7rem; }
+    .stamp-seal{ position:static; margin-top:18px; transform:rotate(-11deg) scale(0.85); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <p class="wordmark"><a href="/">MYSTOICA</a></p>
+      <p class="tagline">a reading, once daily</p>
+    </div>
+    <div class="case-no">
+      <div>Case No. <strong>2026.1114</strong></div>
+      <div>Sourced each morning</div>
+      <div>Mainstream press excluded</div>
+    </div>
+  </header>
+
+  <p class="intro">Three dockets closed within days of each other, each one a different species of trespass made official by the stroke that finally wrote it down.</p>
+
+  <div class="exhibits">
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit A — Filed</div>
+      <div class="exhibit-loc">Frankfort, Kentucky</div>
+      <p class="exhibit-fact">The State Journal's police, fire blotter for Nov. 12, 2026 logs that at 1:31 p.m. city and county firefighters and EMS were called to a ground fire on Park Avenue, and that at 7:32 p.m. officers were called to a shots fired complaint on Chinook Trail, where a caller reported hearing two shots from what sounded like a 9mm.</p>
+      <div class="exhibit-source">
+        <span>The State Journal — Police, fire blotter (Nov. 12)</span>
+        <a href="https://state-journal.com/2026/11/14/police-fire-blotter-nov-12-5/" target="_blank" rel="noopener">state-journal.com ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 -4 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit B — Filed</div>
+      <div class="exhibit-loc">Miami, Florida</div>
+      <p class="exhibit-fact">On Oct. 2, 2026, FSIS announced that Inexport Logistics LLC of Miami, Fla. was recalling approximately 189 pounds of potato chip products containing chicharrón (pork cracklings) because they were produced in the Republic of Colombia, a country not eligible to export meat products to the United States.</p>
+      <div class="exhibit-source">
+        <span>USDA FSIS — Inexport Logistics LLC Recall Notice</span>
+        <a href="https://www.fsis.usda.gov/recalls-alerts/inexport-logistics-llc-recalls-ineligible-pork-cracklings-products-imported-republic" target="_blank" rel="noopener">www.fsis.usda.gov ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 20 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit C — Filed</div>
+      <div class="exhibit-loc">Alexandria, Virginia</div>
+      <p class="exhibit-fact">In a Notice of Opposition filed Sept. 30, 2026 (ESTTA tracking number 1594157), Coulter Ventures, LLC opposed Rogue Snacks Inc.'s application, Serial No. 99719758, to register the mark ROGUE for online retail store services featuring protein bars, protein powders, nutritional supplements, and vitamins, asserting prior use of the ROGUE mark predating March 23, 2026.</p>
+      <div class="exhibit-source">
+        <span>USPTO TTABVUE — Opposition No. 91310785</span>
+        <a href="https://ttabvue.uspto.gov/ttabvue/ttabvue-91310785-OPP-1.pdf" target="_blank" rel="noopener">ttabvue.uspto.gov ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="symbols">
+    <span class="verdict-label">Symbolic Notes</span>
+    <dl class="symbol-list">
+      <div class="symbol-item">
+        <dt>A — The Capitol's Ground Fire</dt>
+        <dd>A fire that starts at ground level in the shadow of a state capitol is not a house fire; it is a boundary fire, heat with no structure to legitimize it. The gunshots that follow six hours later on the far side of the same city are the day's quiet ignition completing itself as discharge.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>B — The Ineligible Chicharrón</dt>
+        <dd>A product can be perfectly edible and still be contraband; the crime here is not the pork, it is the passport. Nineteen-eight-nine pounds of snack food crossed a line that had no interest in its flavor, only its paperwork.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>C — The Word 'Rogue' Under Claim</dt>
+        <dd>A company files to stop another company from owning the one word that already describes everything unregistered, unauthorized, and off the books. The irony is the filing: to be rogue and also trademarked is a contradiction the Board will now be asked to resolve.</dd>
+      </div>
+    </dl>
+    <p class="symbol-synthesis">Fire without a structure, meat without a passport, and a word without a lawful owner are the same object wearing three jurisdictions — something that moved before anyone had the authority to let it.</p>
+  </div>
+
+  <div class="numerology">
+    <span class="verdict-label">Numerology</span>
+    <table class="num-table">
+      <tbody>
+        <tr><td>Time of the Park Avenue ground-fire call (1:31 p.m.)</td><td class="num-reduce">→ 5</td></tr>
+        <tr><td>Weight of the recalled chicharrón product (189 lbs)</td><td class="num-reduce">→ 9</td></tr>
+        <tr><td>TTAB Opposition No. 91310785</td><td class="num-reduce">→ 7</td></tr>
+        <tr><td>ESTTA tracking number on the Notice of Opposition (1594157)</td><td class="num-reduce">→ 5</td></tr>
+        <tr><td>Filing date of the opposition (09/30/2026)</td><td class="num-reduce">→ 4</td></tr>
+      </tbody>
+    </table>
+    <p class="num-callout">The digit 5 surfaces twice — once in the minute the fire was dispatched, once buried in the opposition's tracking number — which under the Adjacency Clause is never coincidence, only the record catching up to itself.</p>
+    <p class="num-synthesis">Five is the number of the threshold crossed without permission; nine and seven are the weights the system assigns after the fact to measure how far the crossing went. Read together, the sequence 5-9-7-5-4 describes a single event decaying from ignition to adjudication.</p>
+  </div>
+
+  <div class="theory">
+    <span class="verdict-label">Working Theory — The Adjacency Clause</span>
+    <p class="theory-text">Under the Adjacency Clause, no filing is isolated — every blotter entry, every recall, every opposition is a fragment of one continuous incident that the bureaucratic apparatus is incapable of perceiving as whole, because it insists on separate departments, separate agencies, separate dockets. Fire does not know it is also meat does not know it is also a disputed word, but the paperwork does, if you read it in the order it was stamped rather than the order it was filed. Today's three exhibits are custody transfers of the same unauthorized motion — first as heat, then as weight, then as language — each department receiving the thing only after it has already left the last one's hands.</p>
+  </div>
+
+  <div class="cascade">
+    <span class="verdict-label">The Cascade</span>
+    <p class="cascade-intro">Trace the custody chain in the order the clock, not the clerk, would keep it:</p>
+
+    <div class="cascade-chain">
+      <div class="cascade-step">
+        <div class="cascade-node">1</div>
+        <p><span class="cascade-loc">Frankfort, Kentucky</span> — 1:31 p.m. — heat breaches containment at ground level on Park Avenue; firefighters are dispatched to a fire with no structure to blame.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">2</div>
+        <p><span class="cascade-loc">Frankfort, Kentucky</span> — 7:32 p.m., same city, same day — the heat resurfaces six hours later as discharge; a caller on Chinook Trail reports two rounds from what sounded like a 9mm.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">3</div>
+        <p><span class="cascade-loc">Miami, Florida</span> — Weeks earlier in the ledger but only now closed out — 189 pounds of chicharrón, sealed in foil bags marked for a market that has no legal claim to sell them, is finally declared ineligible after it has already reached the shelf.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">4</div>
+        <p><span class="cascade-loc">Alexandria, Virginia</span> — The unauthorized finds its final form as language: Coulter Ventures files to prevent a company called Rogue Snacks from lawfully owning the one word that has, by this point, already described a fire, a gunshot, and a shipment of banned pork.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">5</div>
+        <p>The docket closes the loop it opened at 1:31 p.m.: what began as heat with no permit ends as a word with no clear owner, and the system files both under the same unspoken charge — moving before you were allowed to.</p>
+      </div>
+    </div>
+
+    <p class="cascade-outro">The record does not know it has told one story in three languages, but it has, and today it finished.</p>
+    <div class="stamp-seal">so<br>filed</div>
+  </div>
+
+  <footer>
+    <span>Sources cited, connections invented.</span>
+    <a href="/archive.html">View the archive →</a>
+  </footer>
+
+</div>
+</body>
+</html>
