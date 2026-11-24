@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystoica — Reading for Tuesday, November 24, 2026</title>
+<link rel="canonical" href="https://mystoica.com/readings/2026-11-24.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #E9E2CE;
+    --paper-dark: #DED4B9;
+    --ink: #2A2620;
+    --ink-soft: #58503f;
+    --stamp: #9C3B26;
+    --carbon: #3D4A63;
+    --hairline: #b7ab8c;
+    --thread: #8a3226;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Spectral', Georgia, serif;
+    font-size:18px;
+  }
+
+  body{
+    background-image:
+      radial-gradient(ellipse at top left, rgba(255,255,255,0.25), transparent 45%),
+      radial-gradient(ellipse at bottom right, rgba(0,0,0,0.05), transparent 50%);
+  }
+
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 24px 100px;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:1px solid var(--hairline);
+    padding-bottom:22px;
+    margin-bottom:40px;
+  }
+
+  .wordmark{ font-size:2.1rem; letter-spacing:0.04em; font-weight:600; margin:0; }
+  .wordmark a{ color:inherit; text-decoration:none; }
+
+  .tagline{
+    margin:4px 0 0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .case-no{
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    line-height:1.6;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    padding-top:6px;
+  }
+  .case-no strong{ color:var(--ink); }
+
+  .intro{
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin:0 0 34px;
+  }
+
+  .exhibits{ display:flex; flex-direction:column; gap:18px; margin-bottom:44px; }
+
+  .exhibit{
+    position:relative;
+    background:var(--paper-dark);
+    border:1px solid var(--hairline);
+    padding:20px 22px 18px;
+  }
+
+  .exhibit-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .exhibit-tag::before{
+    content:"";
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--stamp);
+    display:inline-block;
+  }
+
+  .exhibit-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+
+  .exhibit-fact{ font-size:1.08rem; line-height:1.55; margin:8px 0 12px; }
+
+  .exhibit-source{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--hairline);
+    padding-top:8px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .exhibit-source a{ color:var(--carbon); text-decoration:none; border-bottom:1px solid var(--carbon); }
+  .exhibit-source a:hover{ opacity:0.7; }
+
+  .thread-row{ display:flex; justify-content:center; margin: -6px 0; }
+  .thread-row svg{ display:block; }
+
+  .symbols{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:linear-gradient(180deg, rgba(255,255,255,0.3), transparent 40%);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .symbols .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .symbol-list{ margin:0 0 16px; }
+  .symbol-item{ margin-bottom:14px; }
+  .symbol-item:last-child{ margin-bottom:0; }
+
+  .symbol-item dt{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    margin-bottom:5px;
+  }
+
+  .symbol-item dd{ margin:0; font-size:0.96rem; line-height:1.6; color:var(--ink); }
+  .symbol-item dd em{ font-style:italic; color:var(--ink-soft); }
+
+  .symbol-synthesis{
+    font-size:1.02rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:14px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .numerology{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:var(--paper-dark);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .numerology .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .num-table{ width:100%; border-collapse:collapse; margin-bottom:14px; font-family:'IBM Plex Mono', monospace; font-size:0.82rem; }
+  .num-table td{ padding:6px 0; border-bottom:1px dashed var(--hairline); color:var(--ink); }
+  .num-table tr:last-child td{ border-bottom:none; }
+  .num-reduce{ text-align:right; color:var(--stamp); white-space:nowrap; width:60px; }
+
+  .num-callout{ font-size:0.98rem; line-height:1.6; margin:0 0 12px; color:var(--ink); }
+  .num-callout strong{ font-family:'IBM Plex Mono', monospace; color:var(--stamp); font-size:1.05rem; }
+
+  .num-synthesis{
+    font-size:0.96rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:12px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .theory{
+    position:relative;
+    border-left:3px solid var(--carbon);
+    background:var(--paper-dark);
+    padding:18px 22px 20px;
+    margin-bottom:26px;
+  }
+  .theory .verdict-label{ position:static; display:inline-block; background:none; padding:0; color:var(--carbon); margin-bottom:8px; }
+  .theory-text{ font-size:0.96rem; line-height:1.6; color:var(--ink); margin:0; }
+
+  .cascade{
+    position:relative;
+    border:1px solid var(--ink);
+    padding:36px 30px 30px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px);
+  }
+
+  .verdict-label{
+    position:absolute;
+    top:-11px;
+    left:26px;
+    background:var(--paper);
+    padding:0 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .cascade-intro{ font-size:1.02rem; line-height:1.6; font-style:italic; color:var(--ink-soft); margin:6px 0 26px; }
+  .cascade-intro em{ color:var(--ink); font-style:italic; }
+
+  .cascade-chain{ position:relative; padding-left:30px; margin-bottom:26px; }
+  .cascade-chain::before{
+    content:"";
+    position:absolute;
+    left:9px; top:6px; bottom:6px; width:1px;
+    background:repeating-linear-gradient(to bottom, var(--thread) 0 4px, transparent 4px 8px);
+    opacity:0.55;
+  }
+
+  .cascade-step{ position:relative; margin-bottom:20px; }
+  .cascade-step:last-child{ margin-bottom:0; }
+
+  .cascade-node{
+    position:absolute;
+    left:-30px; top:1px;
+    width:19px; height:19px;
+    border-radius:50%;
+    background:var(--paper);
+    border:1px solid var(--thread);
+    color:var(--thread);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .cascade-step p{ font-size:0.98rem; line-height:1.6; margin:0; }
+
+  .cascade-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    color:var(--carbon);
+    text-transform:uppercase;
+  }
+
+  .cascade-outro{
+    font-size:1.2rem;
+    line-height:1.6;
+    font-style:italic;
+    font-weight:500;
+    margin:0;
+    padding-top:16px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .stamp-seal{
+    position:absolute;
+    right:22px; bottom:18px;
+    width:92px; height:92px;
+    border:2.5px solid var(--stamp);
+    border-radius:50%;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    transform:rotate(-11deg) scale(0.85);
+    mix-blend-mode:multiply;
+  }
+  .stamp-seal::before{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--stamp);
+    border-radius:50%;
+  }
+
+  footer{
+    margin-top:48px;
+    padding-top:18px;
+    border-top:1px solid var(--hairline);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  footer a{ color:var(--carbon); }
+
+  @media (max-width:600px){
+    .wrap{ padding:36px 16px 70px; }
+    header{ flex-direction:column; gap:14px; }
+    .case-no{ text-align:left; }
+    .wordmark{ font-size:1.7rem; }
+    .stamp-seal{ position:static; margin-top:18px; transform:rotate(-11deg) scale(0.85); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <p class="wordmark"><a href="/">MYSTOICA</a></p>
+      <p class="tagline">a reading, once daily</p>
+    </div>
+    <div class="case-no">
+      <div>Case No. <strong>2026.1124</strong></div>
+      <div>Sourced each morning</div>
+      <div>Mainstream press excluded</div>
+    </div>
+  </header>
+
+  <p class="intro">Three custodial failures surfaced within the same eleven-day window, each one a story about a thing that slipped the hand meant to hold it.</p>
+
+  <div class="exhibits">
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit A — Filed</div>
+      <div class="exhibit-loc">Seymour, Connecticut</div>
+      <p class="exhibit-fact">The Seymour Police Blotter for Nov. 23, 2026 logs an animal complaint in which officers were dispatched for a skunk, and on arrival found that the skunk was gone.</p>
+      <div class="exhibit-source">
+        <span>Valley Independent Sentinel — Seymour Police Blotter</span>
+        <a href="https://valley.newhavenindependent.org/2026/11/23/seymour-police-blotter-58/" target="_blank" rel="noopener">valley.newhavenindependent.org ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 -4 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit B — Filed</div>
+      <div class="exhibit-loc">Washington, D.C. (CPSC)</div>
+      <p class="exhibit-fact">The U.S. Consumer Product Safety Commission announced on Nov. 12, 2026 that roughly 265,000 Sharper Image tabletop fire pits were recalled after fuel could escape the unit, a defect linked to four reported burn injuries.</p>
+      <div class="exhibit-source">
+        <span>KUTV 2News — Eye on Your Money</span>
+        <a href="https://kutv.com/news/eye-on-your-money/shein-baby-toy-sets-and-tabletop-fire-pits-recalled-over-choking-and-burn-hazards" target="_blank" rel="noopener">kutv.com ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 20 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit C — Filed</div>
+      <div class="exhibit-loc">Alexandria, Virginia (USPTO/TTAB)</div>
+      <p class="exhibit-fact">In Opposition No. 91308597, filed Oct. 5, 2026 under ESTTA tracking number ESTTA1595952, Asha Sookdeo moved the Trademark Trial and Appeal Board for judgment on the pleadings against Lara Bruce over the figurative mark FELINE GUARDIANS, alleging the applicant was not the true owner or user of the mark on her own behalf.</p>
+      <div class="exhibit-source">
+        <span>USPTO TTABVUE — Opposition No. 91308597</span>
+        <a href="https://ttabvue.uspto.gov/ttabvue/ttabvue-91308597-OPP-6.pdf" target="_blank" rel="noopener">ttabvue.uspto.gov ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="symbols">
+    <span class="verdict-label">Symbolic Notes</span>
+    <dl class="symbol-list">
+      <div class="symbol-item">
+        <dt>A — The Vanished Skunk</dt>
+        <dd>An animal summoned by complaint and gone before the uniform arrived — a warning that announces itself and then withdraws, leaving only the report of its passing.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>B — The Fire That Left Its Vessel</dt>
+        <dd>A flame designed to stay inside a ring of steel instead found the seam and walked out through it — containment imagined as permanent, proven otherwise in four bodies.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>C — The Disputed Guardian</dt>
+        <dd>A mark built on the word 'Guardians' is itself ungoverned — two women contesting who was ever truly keeping watch, the watchword eating itself.</dd>
+      </div>
+    </dl>
+    <p class="symbol-synthesis">Each exhibit is a custody case disguised as something else: an animal custody no one filed for, a fire's custody of itself revoked, and a word — guardian — whose own guardianship is in dispute.</p>
+  </div>
+
+  <div class="numerology">
+    <span class="verdict-label">Numerology</span>
+    <table class="num-table">
+      <tbody>
+        <tr><td>Opposition No. 91308597, digit sum reduced</td><td class="num-reduce">→ 6</td></tr>
+        <tr><td>265,000 recalled fire pits, digit sum reduced</td><td class="num-reduce">→ 4</td></tr>
+        <tr><td>Confirmed burn injuries named in the recall</td><td class="num-reduce">→ 4</td></tr>
+        <tr><td>ESTTA filing date 10/05/2026, digit sum reduced</td><td class="num-reduce">→ 7</td></tr>
+        <tr><td>Blotter date, Nov. 23, digits reduced</td><td class="num-reduce">→ 5</td></tr>
+      </tbody>
+    </table>
+    <p class="num-callout">The digit 4 surfaces twice — once in the recalled unit count, once in the injury count — the only repetition in the set.</p>
+    <p class="num-synthesis">A doubled four is a structural number, the number of the stable thing that failed to stay stable: four walls, four burns, four corners of a pen a skunk walked out of unseen.</p>
+  </div>
+
+  <div class="theory">
+    <span class="verdict-label">Working Theory — The Adjacency Clause</span>
+    <p class="theory-text">Under what we have come to call the Adjacency Clause, no record is orphaned if it is filed within the same cycle as another record describing an escape from containment. The Clause does not require intention, only proximity: a blotter, a federal safety notice, and a trademark docket need share nothing but their week to be read as a single ledger. What the Clause asks us to notice this cycle is that 'guardian' is the word under strain in all three filings, spoken or not — the police are guardians of the perimeter the skunk crossed, the recall exists because a fire pit failed in its one guardian duty of holding flame, and the TTAB dispute is, verbatim, a fight over who gets to be called Guardian at all.</p>
+  </div>
+
+  <div class="cascade">
+    <span class="verdict-label">The Cascade</span>
+    <p class="cascade-intro">Trace the custody of the word backward through the five days that bind these filings, and the chain holds.</p>
+
+    <div class="cascade-chain">
+      <div class="cascade-step">
+        <div class="cascade-node">1</div>
+        <p><span class="cascade-loc">Seymour, Connecticut</span> — An animal is reported, a unit is dispatched, and the thing guarded against is already gone by the time the guard arrives — the first breach of custody, unwitnessed.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">2</div>
+        <p><span class="cascade-loc">Washington, D.C.</span> — Eleven days earlier, in the same federal apparatus that logs such breaches nationally, the CPSC records that a different kind of containment — a steel fire ring — has already failed four times over, fuel loosed from its vessel exactly as the skunk was loosed from its yard.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">3</div>
+        <p>The count of the failure, 265,000 units wide, reduces by digit to the same 4 that counts the injuries — the arithmetic insisting that scale and harm are, this week, the same number wearing two faces.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">4</div>
+        <p><span class="cascade-loc">Alexandria, Virginia</span> — On Oct. 5, 2026, before either the fire or the skunk is logged, a petition is filed asking the Board to decide who was ever entitled to call herself a guardian of anything — the word itself taken into custody by lawyers.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">5</div>
+        <p>By Nov. 23 the three records sit adjacent in the week's files, none citing the others, each nonetheless a ruling on the same question: what happens to the thing that was supposed to be held, and wasn't.</p>
+      </div>
+    </div>
+
+    <p class="cascade-outro">The skunk left no forwarding address, the fire left its ring, and the guardian left her own name in dispute — custody, this week, belongs to no one.</p>
+    <div class="stamp-seal">so<br>it escapes</div>
+  </div>
+
+  <footer>
+    <span>Sources cited, connections invented.</span>
+    <a href="/archive.html">View the archive →</a>
+  </footer>
+
+</div>
+</body>
+</html>
