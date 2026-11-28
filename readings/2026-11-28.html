@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystoica — Reading for Saturday, November 28, 2026</title>
+<link rel="canonical" href="https://mystoica.com/readings/2026-11-28.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #E9E2CE;
+    --paper-dark: #DED4B9;
+    --ink: #2A2620;
+    --ink-soft: #58503f;
+    --stamp: #9C3B26;
+    --carbon: #3D4A63;
+    --hairline: #b7ab8c;
+    --thread: #8a3226;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Spectral', Georgia, serif;
+    font-size:18px;
+  }
+
+  body{
+    background-image:
+      radial-gradient(ellipse at top left, rgba(255,255,255,0.25), transparent 45%),
+      radial-gradient(ellipse at bottom right, rgba(0,0,0,0.05), transparent 50%);
+  }
+
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 24px 100px;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:1px solid var(--hairline);
+    padding-bottom:22px;
+    margin-bottom:40px;
+  }
+
+  .wordmark{ font-size:2.1rem; letter-spacing:0.04em; font-weight:600; margin:0; }
+  .wordmark a{ color:inherit; text-decoration:none; }
+
+  .tagline{
+    margin:4px 0 0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .case-no{
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    line-height:1.6;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    padding-top:6px;
+  }
+  .case-no strong{ color:var(--ink); }
+
+  .intro{
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    margin:0 0 34px;
+  }
+
+  .exhibits{ display:flex; flex-direction:column; gap:18px; margin-bottom:44px; }
+
+  .exhibit{
+    position:relative;
+    background:var(--paper-dark);
+    border:1px solid var(--hairline);
+    padding:20px 22px 18px;
+  }
+
+  .exhibit-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .exhibit-tag::before{
+    content:"";
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--stamp);
+    display:inline-block;
+  }
+
+  .exhibit-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+
+  .exhibit-fact{ font-size:1.08rem; line-height:1.55; margin:8px 0 12px; }
+
+  .exhibit-source{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--hairline);
+    padding-top:8px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .exhibit-source a{ color:var(--carbon); text-decoration:none; border-bottom:1px solid var(--carbon); }
+  .exhibit-source a:hover{ opacity:0.7; }
+
+  .thread-row{ display:flex; justify-content:center; margin: -6px 0; }
+  .thread-row svg{ display:block; }
+
+  .symbols{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:linear-gradient(180deg, rgba(255,255,255,0.3), transparent 40%);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .symbols .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .symbol-list{ margin:0 0 16px; }
+  .symbol-item{ margin-bottom:14px; }
+  .symbol-item:last-child{ margin-bottom:0; }
+
+  .symbol-item dt{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    margin-bottom:5px;
+  }
+
+  .symbol-item dd{ margin:0; font-size:0.96rem; line-height:1.6; color:var(--ink); }
+  .symbol-item dd em{ font-style:italic; color:var(--ink-soft); }
+
+  .symbol-synthesis{
+    font-size:1.02rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:14px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .numerology{
+    position:relative;
+    border:1px solid var(--hairline);
+    background:var(--paper-dark);
+    padding:20px 22px 22px;
+    margin-bottom:26px;
+  }
+  .numerology .verdict-label{ position:static; display:inline-block; background:none; padding:0; margin-bottom:12px; }
+
+  .num-table{ width:100%; border-collapse:collapse; margin-bottom:14px; font-family:'IBM Plex Mono', monospace; font-size:0.82rem; }
+  .num-table td{ padding:6px 0; border-bottom:1px dashed var(--hairline); color:var(--ink); }
+  .num-table tr:last-child td{ border-bottom:none; }
+  .num-reduce{ text-align:right; color:var(--stamp); white-space:nowrap; width:60px; }
+
+  .num-callout{ font-size:0.98rem; line-height:1.6; margin:0 0 12px; color:var(--ink); }
+  .num-callout strong{ font-family:'IBM Plex Mono', monospace; color:var(--stamp); font-size:1.05rem; }
+
+  .num-synthesis{
+    font-size:0.96rem;
+    line-height:1.6;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+    padding-top:12px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .theory{
+    position:relative;
+    border-left:3px solid var(--carbon);
+    background:var(--paper-dark);
+    padding:18px 22px 20px;
+    margin-bottom:26px;
+  }
+  .theory .verdict-label{ position:static; display:inline-block; background:none; padding:0; color:var(--carbon); margin-bottom:8px; }
+  .theory-text{ font-size:0.96rem; line-height:1.6; color:var(--ink); margin:0; }
+
+  .cascade{
+    position:relative;
+    border:1px solid var(--ink);
+    padding:36px 30px 30px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px);
+  }
+
+  .verdict-label{
+    position:absolute;
+    top:-11px;
+    left:26px;
+    background:var(--paper);
+    padding:0 10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .cascade-intro{ font-size:1.02rem; line-height:1.6; font-style:italic; color:var(--ink-soft); margin:6px 0 26px; }
+  .cascade-intro em{ color:var(--ink); font-style:italic; }
+
+  .cascade-chain{ position:relative; padding-left:30px; margin-bottom:26px; }
+  .cascade-chain::before{
+    content:"";
+    position:absolute;
+    left:9px; top:6px; bottom:6px; width:1px;
+    background:repeating-linear-gradient(to bottom, var(--thread) 0 4px, transparent 4px 8px);
+    opacity:0.55;
+  }
+
+  .cascade-step{ position:relative; margin-bottom:20px; }
+  .cascade-step:last-child{ margin-bottom:0; }
+
+  .cascade-node{
+    position:absolute;
+    left:-30px; top:1px;
+    width:19px; height:19px;
+    border-radius:50%;
+    background:var(--paper);
+    border:1px solid var(--thread);
+    color:var(--thread);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .cascade-step p{ font-size:0.98rem; line-height:1.6; margin:0; }
+
+  .cascade-loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    color:var(--carbon);
+    text-transform:uppercase;
+  }
+
+  .cascade-outro{
+    font-size:1.2rem;
+    line-height:1.6;
+    font-style:italic;
+    font-weight:500;
+    margin:0;
+    padding-top:16px;
+    border-top:1px dashed var(--hairline);
+  }
+
+  .stamp-seal{
+    position:absolute;
+    right:22px; bottom:18px;
+    width:92px; height:92px;
+    border:2.5px solid var(--stamp);
+    border-radius:50%;
+    color:var(--stamp);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    transform:rotate(-11deg) scale(0.85);
+    mix-blend-mode:multiply;
+  }
+  .stamp-seal::before{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--stamp);
+    border-radius:50%;
+  }
+
+  footer{
+    margin-top:48px;
+    padding-top:18px;
+    border-top:1px solid var(--hairline);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  footer a{ color:var(--carbon); }
+
+  @media (max-width:600px){
+    .wrap{ padding:36px 16px 70px; }
+    header{ flex-direction:column; gap:14px; }
+    .case-no{ text-align:left; }
+    .wordmark{ font-size:1.7rem; }
+    .stamp-seal{ position:static; margin-top:18px; transform:rotate(-11deg) scale(0.85); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <p class="wordmark"><a href="/">MYSTOICA</a></p>
+      <p class="tagline">a reading, once daily</p>
+    </div>
+    <div class="case-no">
+      <div>Case No. <strong>2026.1128</strong></div>
+      <div>Sourced each morning</div>
+      <div>Mainstream press excluded</div>
+    </div>
+  </header>
+
+  <p class="intro">Three bodies of record, filed four hundred miles apart in three different registries, agree on a single verb: contain.</p>
+
+  <div class="exhibits">
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit A — Filed</div>
+      <div class="exhibit-loc">Madison, Wisconsin</div>
+      <p class="exhibit-fact">The UW–Madison Police Department's daily blotter for Nov. 27, 2026 logs a 12:55 a.m. call at Pres House Apartments for depositing human waste, in which officers contacted, cited, and released the person under the municipal ordinance, followed at 4:23 a.m. by a mental health welfare check at a redacted location.</p>
+      <div class="exhibit-source">
+        <span>UW–Madison Police Department Daily Blotter</span>
+        <a href="https://uwpd.wisc.edu/daily-blotter/2026-11-27/" target="_blank" rel="noopener">uwpd.wisc.edu ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 -4 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit B — Filed</div>
+      <div class="exhibit-loc">Brentwood Borough, Pennsylvania</div>
+      <p class="exhibit-fact">Brentwood Borough's call-for-service log for Nov. 25–26, 2026 records four back-to-back incidents on or near East Garden Road: a 'Not Breathing' call at 1:06 p.m., a 'Psych' call on Brownsville Road at 2:04 p.m., a no-injury crash at 3:25 p.m., and an unwanted/stray animal call back on East Garden Road at 7:39 p.m., bearing sequential case numbers BREP26017361 through BREP26017364.</p>
+      <div class="exhibit-source">
+        <span>Brentwood Boro PD Daily Blotter (CrimeWatch)</span>
+        <a href="https://crimewatch.net/us/pa/allegheny/brentwood-boro-pd/17167/post/daily-blotter-112526-112626" target="_blank" rel="noopener">crimewatch.net ↗</a>
+      </div>
+    </div>
+
+    <div class="thread-row">
+      <svg width="60" height="16" viewBox="0 0 60 16"><path d="M0 8 Q 30 20 60 8" stroke="#8a3226" stroke-width="1" fill="none" stroke-dasharray="2 3" opacity="0.6"/></svg>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-tag">Exhibit C — Filed</div>
+      <div class="exhibit-loc">Longview, Texas / Nationwide (AR, LA, MS, OK, TN, TX)</div>
+      <p class="exhibit-fact">FSIS's active public health alert, posted Nov. 14, 2026, warns that Fresh & Ready Foods LLC's 'Meals Made in Minutes' Biscuit & Sausage Gravy, SKU 90013, may be contaminated with Listeria monocytogenes due to a tainted biscuit ingredient, with the listing updated Nov. 19 to add further affected labels.</p>
+      <div class="exhibit-source">
+        <span>FSIS Recalls & Public Health Alerts</span>
+        <a href="https://www.fsis.usda.gov/recalls" target="_blank" rel="noopener">www.fsis.usda.gov ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="symbols">
+    <span class="verdict-label">Symbolic Notes</span>
+    <dl class="symbol-list">
+      <div class="symbol-item">
+        <dt>A — The Uncontained Residue</dt>
+        <dd>What is deposited at 12:55 a.m. and cited under a municipal code is the body refusing its architecture, leaving a mark no lease can absorb. The welfare check ninety minutes later is the same refusal, moved inward.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>B — The Street That Keeps Returning</dt>
+        <dd>A single road receives four separate emergencies in one day — breath, mind, collision, animal — as if East Garden Road were not a location but a wound that keeps reopening at the same coordinates.</dd>
+      </div>
+      <div class="symbol-item">
+        <dt>C — The Gravy That Was Already Spoken For</dt>
+        <dd>A product named for speed — 'Meals Made in Minutes' — conceals a contaminant with an incubation period measured in days, a quiet rebuke to anything that claims to be instant.</dd>
+      </div>
+    </dl>
+    <p class="symbol-synthesis">Each exhibit is a container failing privately before it fails publicly: the apartment, the street, the clamshell package — all breached from within, all logged only after the fact.</p>
+  </div>
+
+  <div class="numerology">
+    <span class="verdict-label">Numerology</span>
+    <table class="num-table">
+      <tbody>
+        <tr><td>Citation time 12:55 a.m., digits summed (1+2+5+5)</td><td class="num-reduce">→ 13 → 4</td></tr>
+        <tr><td>Span of four sequential Brentwood case numbers (17361–17364)</td><td class="num-reduce">→ 4</td></tr>
+        <tr><td>FSIS alert date, Nov. 14, digits summed (1+4)</td><td class="num-reduce">→ 5</td></tr>
+        <tr><td>Recalled SKU 90013, digits summed (9+0+0+1+3)</td><td class="num-reduce">→ 13 → 4</td></tr>
+        <tr><td>Package weight, 9.5 oz, digits summed (9+5)</td><td class="num-reduce">→ 14 → 5</td></tr>
+      </tbody>
+    </table>
+    <p class="num-callout">The digit 4 surfaces three separate times — in the citation, in the call count, in the SKU — while 5 answers twice, as if two currents were running under the same day.</p>
+    <p class="num-synthesis">Four is the number of a thing that has been sealed and reopened; its repetition across an ordinance citation, an emergency sequence, and a product code suggests containment itself is the recurring theme, not coincidence.</p>
+  </div>
+
+  <div class="theory">
+    <span class="verdict-label">Working Theory — The Adjacency Clause</span>
+    <p class="theory-text">Under the Adjacency Clause, no record needs to cite another to be bound to it; proximity in time is itself a form of custody. A citation filed in Wisconsin at 12:55 a.m., a call sequence logged in Pennsylvania across the same calendar date, and a federal alert still active from two weeks prior do not require a shared cause — they require only a shared window of exposure, which the clause treats as sufficient grounds for entanglement.</p>
+  </div>
+
+  <div class="cascade">
+    <span class="verdict-label">The Cascade</span>
+    <p class="cascade-intro">Trace the custody of the day's failures as they pass from body, to street, to supply chain, and back again.</p>
+
+    <div class="cascade-chain">
+      <div class="cascade-step">
+        <div class="cascade-node">1</div>
+        <p><span class="cascade-loc">Madison, Wisconsin</span> — A body deposits what it cannot hold, at an hour when containment itself is thinnest, inside a residence named for a house of worship.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">2</div>
+        <p><span class="cascade-loc">Madison, Wisconsin</span> — Ninety minutes later, a second failure of containment is logged at a redacted address — this time the welfare check finds no object, only crisis, as if the first citation had simply changed form.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">3</div>
+        <p><span class="cascade-loc">Brentwood Borough, Pennsylvania</span> — On a single road, breath fails first, then mind, then machine, then a stray animal wanders into the gap left by all three — four case numbers, four hours, one unbroken street.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">4</div>
+        <p><span class="cascade-loc">Longview, Texas</span> — A biscuit, already contaminated before it reaches the gravy, is sealed into a clamshell labeled for speed and shipped six states deep before anyone notices the supplier's recall trailing behind it.</p>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-node">5</div>
+        <p><span class="cascade-loc">Washington, D.C.</span> — FSIS posts the alert fourteen days before the Wisconsin citation and the Pennsylvania log converge on the calendar, meaning the contamination was already in transit while the other two failures were still being written down.</p>
+      </div>
+    </div>
+
+    <p class="cascade-outro">The body, the street, and the supply chain were never separate case files; they were one failure of containment, filed in three jurisdictions under three different clerks.</p>
+    <div class="stamp-seal">so<br>contained</div>
+  </div>
+
+  <footer>
+    <span>Sources cited, connections invented.</span>
+    <a href="/archive.html">View the archive →</a>
+  </footer>
+
+</div>
+</body>
+</html>
